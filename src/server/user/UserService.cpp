@@ -1,5 +1,4 @@
 #include "UserService.h"
-#include "MySQL.h"
 // User表的增加方法
 bool UserService::Insert(User &user)
 {

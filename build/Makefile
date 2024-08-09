@@ -133,7 +133,7 @@ account: cmake_check_build_system
 
 # fast build rule for target.
 account/fast:
-	$(MAKE) -f src/server/account/CMakeFiles/account.dir/build.make src/server/account/CMakeFiles/account.dir/build
+	$(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/build
 .PHONY : account/fast
 
 # Help Target

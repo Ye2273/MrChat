@@ -90,38 +90,59 @@ src/clean: src/server/clean
 
 # Recursive "all" directory target.
 src/server/all: src/server/CMakeFiles/MrChat.dir/all
-src/server/all: src/server/account/all
+src/server/all: src/server/AccountService/all
+src/server/all: src/server/FriendService/all
 
 .PHONY : src/server/all
 
 # Recursive "preinstall" directory target.
-src/server/preinstall: src/server/account/preinstall
+src/server/preinstall: src/server/AccountService/preinstall
+src/server/preinstall: src/server/FriendService/preinstall
 
 .PHONY : src/server/preinstall
 
 # Recursive "clean" directory target.
 src/server/clean: src/server/CMakeFiles/MrChat.dir/clean
-src/server/clean: src/server/account/clean
+src/server/clean: src/server/AccountService/clean
+src/server/clean: src/server/FriendService/clean
 
 .PHONY : src/server/clean
 
 #=============================================================================
-# Directory level rules for directory src/server/account
+# Directory level rules for directory src/server/AccountService
 
 # Recursive "all" directory target.
-src/server/account/all: src/server/account/CMakeFiles/account.dir/all
+src/server/AccountService/all: src/server/AccountService/CMakeFiles/account.dir/all
 
-.PHONY : src/server/account/all
+.PHONY : src/server/AccountService/all
 
 # Recursive "preinstall" directory target.
-src/server/account/preinstall:
+src/server/AccountService/preinstall:
 
-.PHONY : src/server/account/preinstall
+.PHONY : src/server/AccountService/preinstall
 
 # Recursive "clean" directory target.
-src/server/account/clean: src/server/account/CMakeFiles/account.dir/clean
+src/server/AccountService/clean: src/server/AccountService/CMakeFiles/account.dir/clean
 
-.PHONY : src/server/account/clean
+.PHONY : src/server/AccountService/clean
+
+#=============================================================================
+# Directory level rules for directory src/server/FriendService
+
+# Recursive "all" directory target.
+src/server/FriendService/all:
+
+.PHONY : src/server/FriendService/all
+
+# Recursive "preinstall" directory target.
+src/server/FriendService/preinstall:
+
+.PHONY : src/server/FriendService/preinstall
+
+# Recursive "clean" directory target.
+src/server/FriendService/clean:
+
+.PHONY : src/server/FriendService/clean
 
 #=============================================================================
 # Target rules for target src/server/CMakeFiles/MrChat.dir
@@ -130,12 +151,12 @@ src/server/account/clean: src/server/account/CMakeFiles/account.dir/clean
 src/server/CMakeFiles/MrChat.dir/all:
 	$(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/depend
 	$(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target MrChat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target MrChat"
 .PHONY : src/server/CMakeFiles/MrChat.dir/all
 
 # Build rule for subdir invocation for target.
 src/server/CMakeFiles/MrChat.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 src/server/CMakeFiles/MrChat.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 0
 .PHONY : src/server/CMakeFiles/MrChat.dir/rule
@@ -151,31 +172,31 @@ src/server/CMakeFiles/MrChat.dir/clean:
 .PHONY : src/server/CMakeFiles/MrChat.dir/clean
 
 #=============================================================================
-# Target rules for target src/server/account/CMakeFiles/account.dir
+# Target rules for target src/server/AccountService/CMakeFiles/account.dir
 
 # All Build rule for target.
-src/server/account/CMakeFiles/account.dir/all:
-	$(MAKE) -f src/server/account/CMakeFiles/account.dir/build.make src/server/account/CMakeFiles/account.dir/depend
-	$(MAKE) -f src/server/account/CMakeFiles/account.dir/build.make src/server/account/CMakeFiles/account.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=8,9,10,11,12,13 "Built target account"
-.PHONY : src/server/account/CMakeFiles/account.dir/all
+src/server/AccountService/CMakeFiles/account.dir/all:
+	$(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/depend
+	$(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=11,12,13,14,15,16,17 "Built target account"
+.PHONY : src/server/AccountService/CMakeFiles/account.dir/all
 
 # Build rule for subdir invocation for target.
-src/server/account/CMakeFiles/account.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 src/server/account/CMakeFiles/account.dir/all
+src/server/AccountService/CMakeFiles/account.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 src/server/AccountService/CMakeFiles/account.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 0
-.PHONY : src/server/account/CMakeFiles/account.dir/rule
+.PHONY : src/server/AccountService/CMakeFiles/account.dir/rule
 
 # Convenience name for target.
-account: src/server/account/CMakeFiles/account.dir/rule
+account: src/server/AccountService/CMakeFiles/account.dir/rule
 
 .PHONY : account
 
 # clean rule for target.
-src/server/account/CMakeFiles/account.dir/clean:
-	$(MAKE) -f src/server/account/CMakeFiles/account.dir/build.make src/server/account/CMakeFiles/account.dir/clean
-.PHONY : src/server/account/CMakeFiles/account.dir/clean
+src/server/AccountService/CMakeFiles/account.dir/clean:
+	$(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/clean
+.PHONY : src/server/AccountService/CMakeFiles/account.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

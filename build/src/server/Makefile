@@ -233,6 +233,33 @@ interface/main.cpp.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/interface/main.cpp.s
 .PHONY : interface/main.cpp.s
 
+offlinemsg/OfflineMsg.o: offlinemsg/OfflineMsg.cpp.o
+
+.PHONY : offlinemsg/OfflineMsg.o
+
+# target to build an object file
+offlinemsg/OfflineMsg.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o
+.PHONY : offlinemsg/OfflineMsg.cpp.o
+
+offlinemsg/OfflineMsg.i: offlinemsg/OfflineMsg.cpp.i
+
+.PHONY : offlinemsg/OfflineMsg.i
+
+# target to preprocess a source file
+offlinemsg/OfflineMsg.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.i
+.PHONY : offlinemsg/OfflineMsg.cpp.i
+
+offlinemsg/OfflineMsg.s: offlinemsg/OfflineMsg.cpp.s
+
+.PHONY : offlinemsg/OfflineMsg.s
+
+# target to generate assembly for a file
+offlinemsg/OfflineMsg.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.s
+.PHONY : offlinemsg/OfflineMsg.cpp.s
+
 proto/AccountService.pb.o: proto/AccountService.pb.cc.o
 
 .PHONY : proto/AccountService.pb.o
@@ -259,6 +286,33 @@ proto/AccountService.pb.s: proto/AccountService.pb.cc.s
 proto/AccountService.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.s
 .PHONY : proto/AccountService.pb.cc.s
+
+proto/FriendService.pb.o: proto/FriendService.pb.cc.o
+
+.PHONY : proto/FriendService.pb.o
+
+# target to build an object file
+proto/FriendService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o
+.PHONY : proto/FriendService.pb.cc.o
+
+proto/FriendService.pb.i: proto/FriendService.pb.cc.i
+
+.PHONY : proto/FriendService.pb.i
+
+# target to preprocess a source file
+proto/FriendService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.i
+.PHONY : proto/FriendService.pb.cc.i
+
+proto/FriendService.pb.s: proto/FriendService.pb.cc.s
+
+.PHONY : proto/FriendService.pb.s
+
+# target to generate assembly for a file
+proto/FriendService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.s
+.PHONY : proto/FriendService.pb.cc.s
 
 proto/Interface.pb.o: proto/Interface.pb.cc.o
 
@@ -287,6 +341,33 @@ proto/Interface.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.s
 .PHONY : proto/Interface.pb.cc.s
 
+user/UserService.o: user/UserService.cpp.o
+
+.PHONY : user/UserService.o
+
+# target to build an object file
+user/UserService.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o
+.PHONY : user/UserService.cpp.o
+
+user/UserService.i: user/UserService.cpp.i
+
+.PHONY : user/UserService.i
+
+# target to preprocess a source file
+user/UserService.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.i
+.PHONY : user/UserService.cpp.i
+
+user/UserService.s: user/UserService.cpp.s
+
+.PHONY : user/UserService.s
+
+# target to generate assembly for a file
+user/UserService.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.s
+.PHONY : user/UserService.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -308,12 +389,21 @@ help:
 	@echo "... interface/main.o"
 	@echo "... interface/main.i"
 	@echo "... interface/main.s"
+	@echo "... offlinemsg/OfflineMsg.o"
+	@echo "... offlinemsg/OfflineMsg.i"
+	@echo "... offlinemsg/OfflineMsg.s"
 	@echo "... proto/AccountService.pb.o"
 	@echo "... proto/AccountService.pb.i"
 	@echo "... proto/AccountService.pb.s"
+	@echo "... proto/FriendService.pb.o"
+	@echo "... proto/FriendService.pb.i"
+	@echo "... proto/FriendService.pb.s"
 	@echo "... proto/Interface.pb.o"
 	@echo "... proto/Interface.pb.i"
 	@echo "... proto/Interface.pb.s"
+	@echo "... user/UserService.o"
+	@echo "... user/UserService.i"
+	@echo "... user/UserService.s"
 .PHONY : help
 
 

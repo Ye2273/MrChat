@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ye/MrChat/src/server/interface/Interface.cpp" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o"
   "/home/ye/MrChat/src/server/interface/InterfaceService.cpp" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o"
   "/home/ye/MrChat/src/server/interface/main.cpp" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o"
+  "/home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o"
   "/home/ye/MrChat/src/server/proto/AccountService.pb.cc" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o"
+  "/home/ye/MrChat/src/server/proto/FriendService.pb.cc" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o"
   "/home/ye/MrChat/src/server/proto/Interface.pb.cc" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o"
+  "/home/ye/MrChat/src/server/user/UserService.cpp" "/home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,7 +24,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include/server/user"
   "../include/server/db"
   "../include/server/proto"
-  "../include/server/account"
+  "../include/server/AccountService"
+  "../include/server/offlinemsg"
+  "../include/server/FriendService"
   )
 
 # Targets to which this target links.

@@ -5,6 +5,8 @@
 /home/ye/MrChat/build/src/server/CMakeFiles/rebuild_cache.dir
 /home/ye/MrChat/build/src/server/CMakeFiles/edit_cache.dir
 /home/ye/MrChat/build/src/server/CMakeFiles/MrChat.dir
-/home/ye/MrChat/build/src/server/account/CMakeFiles/rebuild_cache.dir
-/home/ye/MrChat/build/src/server/account/CMakeFiles/edit_cache.dir
-/home/ye/MrChat/build/src/server/account/CMakeFiles/account.dir
+/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/rebuild_cache.dir
+/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/edit_cache.dir
+/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir
+/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/rebuild_cache.dir
+/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/edit_cache.dir

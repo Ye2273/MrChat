@@ -28,7 +28,7 @@ void Interface::onConnection(const muduo::net::TcpConnectionPtr& conn)
     // 客户端断开链接
     if (!conn->connected())
     {
-        // ChatService::instance()->clientCloseException(conn);
+        InterfaceService::GetInstance().ClientCloseException(conn);
         conn->shutdown();
     }
 }
@@ -38,7 +38,7 @@ void Interface::onMessage(const muduo::net::TcpConnectionPtr& conn, muduo::net::
     std::string msg = buf->retrieveAllAsString();
     Ye_Interface::InterfaceRequest re;
     re.set_request_msg("hello");
-    re.set_type("Login");
+    re.set_type("Chat");
     std::string request_str = re.SerializeAsString();
     Ye_Interface::InterfaceRequest request;
     request.ParseFromString(request_str);
@@ -46,7 +46,7 @@ void Interface::onMessage(const muduo::net::TcpConnectionPtr& conn, muduo::net::
     auto msg_handler = InterfaceService::GetInstance().GetHandler(request.type());
 
     std::string recv_str = request.request_msg();
-    std::cout << "recv_str: " << recv_str << std::endl;
+    // std::cout << "recv_str: " << recv_str << std::endl;
     msg_handler(conn, recv_str, time);
     
 }

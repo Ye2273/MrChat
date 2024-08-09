@@ -4,28 +4,51 @@
 src/server/CMakeFiles/MrChat.dir/db/MySQL.cpp.o: ../include/server/db/MySQL.h
 src/server/CMakeFiles/MrChat.dir/db/MySQL.cpp.o: ../src/server/db/MySQL.cpp
 
+src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/db/MySQL.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/interface/Interface.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/interface/InterfaceService.h
+src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
+src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/AccountService.pb.h
+src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/FriendService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/Interface.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/user/User.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/user/UserService.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../src/server/interface/Interface.cpp
 
+src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/db/MySQL.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/interface/InterfaceService.h
+src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/proto/AccountService.pb.h
+src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/proto/FriendService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/user/User.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/user/UserService.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../src/server/interface/InterfaceService.cpp
 
+src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/db/MySQL.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/interface/Interface.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/interface/InterfaceService.h
+src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
+src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/proto/AccountService.pb.h
+src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/proto/FriendService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/user/User.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/user/UserService.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../src/server/interface/main.cpp
 
+src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o: ../include/server/db/MySQL.h
+src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
+src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o: ../src/server/offlinemsg/OfflineMsg.cpp
+
 src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o: ../include/server/proto/AccountService.pb.h
 src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o: ../src/server/proto/AccountService.pb.cc
 
+src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o: ../include/server/proto/FriendService.pb.h
+src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o: ../src/server/proto/FriendService.pb.cc
+
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o: ../include/server/proto/Interface.pb.h
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o: ../src/server/proto/Interface.pb.cc
+
+src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o: ../include/server/db/MySQL.h
+src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o: ../include/server/user/User.h
+src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o: ../include/server/user/UserService.h
+src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o: ../src/server/user/UserService.cpp
 

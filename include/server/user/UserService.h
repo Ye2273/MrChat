@@ -1,5 +1,6 @@
 #pragma once
 #include "User.h"
+#include "MySQL.h"
 // User表的数据操作类
 class UserService {
 public:

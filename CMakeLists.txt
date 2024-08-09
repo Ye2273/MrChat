@@ -15,7 +15,9 @@ include_directories(${PROJECT_SOURCE_DIR}/include/server/interface)
 include_directories(${PROJECT_SOURCE_DIR}/include/server/user)
 include_directories(${PROJECT_SOURCE_DIR}/include/server/db)
 include_directories(${PROJECT_SOURCE_DIR}/include/server/proto)
-include_directories(${PROJECT_SOURCE_DIR}/include/server/account)
+include_directories(${PROJECT_SOURCE_DIR}/include/server/AccountService)
+include_directories(${PROJECT_SOURCE_DIR}/include/server/offlinemsg)
+include_directories(${PROJECT_SOURCE_DIR}/include/server/FriendService)
 link_directories(/usr/lib64/mysql)
 
 # 加载子目录
