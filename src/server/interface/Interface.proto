@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package Interface;
+
+message InterfaceRequest
+{
+    bytes type = 1;
+    bytes request_msg = 2;
+}
+
+message InterfaceResponse
+{
+    bytes type = 1;
+    bytes response_msg = 2;
+}
+
