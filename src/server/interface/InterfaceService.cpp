@@ -134,6 +134,7 @@ void InterfaceService::Login(const muduo::net::TcpConnectionPtr &conn, std::stri
             std::lock_guard<std::mutex> lock(_connMutex);
             _userConnMap[login_response.id()] = conn;
         }
+        
         // //序列化并发送响应给客户端
         // string send_str = login_response.SerializeAsString();
         // conn->send(send_str);
@@ -331,7 +332,7 @@ void InterfaceService::GroupList(const muduo::net::TcpConnectionPtr &conn, std::
         LOG_ERROR << "Get group list failed";
     }
 }
-// 处理获取群组用户id列表业务
+// 处理获取群组用户id列表业务,同时转发消息
 void InterfaceService::GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)
 {
     // 1. 构造rpc请求(要反序列化recv_buf)

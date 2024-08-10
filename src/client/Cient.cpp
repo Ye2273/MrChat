@@ -199,12 +199,20 @@ void recvThread(int clientfd) {
         // 注意：需要根据实际协议处理数据长度和拼接
         std::string data(buffer, ret); // 使用接收到的数据创建一个 string 对象
 
-        // 定义不同的消息类型
+        // 定义不同的消息类型, 用于接收数据
         Ye_AccountService::LoginResponse login_response;
         Ye_AccountService::RegisterResponse register_response;
         Ye_AccountService::LogoutResponse logout_response;
         Ye_Interface::ChatMsg chat_msg;
+        Ye_Interface::GroupMsg group_msg;
         Ye_GroupService::GroupListResponse group_list_response;
+        Ye_GroupService::CreateGroupResponse create_group_response;
+        Ye_GroupService::AddGroupResponse add_group_response;
+        
+        Ye_GroupService::UserInfo user_info;
+        Ye_FriendService::AddFriendResponse add_friend_response;
+        Ye_FriendService::FriendListResponse friend_list_response;
+
 
         // 处理不同的消息类型
         if (login_response.ParseFromString(data)) {
@@ -225,14 +233,18 @@ void recvThread(int clientfd) {
             }
         } else if (group_list_response.ParseFromString(data)) {
             // 接收群组列表信息
-            // _currentUserGroupList.clear();
-            // for (int i = 0; i < group_list_response.group_list_size(); i++) {
-            //     _currentUserGroupList.push_back(group_list_response.group_list(i));
-            // }
+            _currentUserGroupList.clear();
+            for(int i = 0; i < group_list_response.groups_size(); i++) {
+                Ye_GroupService::GroupInfo group_info = group_list_response.groups(i);
+                _currentUserGroupList.push_back(group_info);
+            }
+            // 昨天在这里            ！！！！！！！！！！！！
+
+
         } else if (chat_msg.ParseFromString(data)) {
             std::cout << "========================" << std::endl;
-            std::cout << "From: " << chat_msg.from_user_id() << std::endl;
-            // std::cout << "Time: " << chat_msg.time() << std::endl;
+            std::cout << "From: " << chat_msg.from_user_id() << " " << chat_msg.user_name() << std::endl;
+            std::cout << "Time: " << chat_msg.time() << std::endl;
             std::cout << "Content: " << chat_msg.msg() << std::endl;
             std::cout << "========================" << std::endl;
         } else {
@@ -370,7 +382,7 @@ void chat(int clientfd, std::string str)
     chat_msg.set_from_user_id(_currentUser.GetId());
     chat_msg.set_to_user_id(friendid);
     chat_msg.set_msg(message);
-    // chat_msg.set_time(getCurrentTime());
+    chat_msg.set_time(getCurrentTime());
     std::string buffer;
 
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
@@ -432,16 +444,13 @@ void groupchat(int clientfd, std::string str)
     int groupid = atoi(str.substr(0, idx).c_str());
     std::string message = str.substr(idx + 1, str.size() - idx);
 
-    // json js;
-    // js["msgid"] = GROUP_CHAT_MSG;
-    // js["id"] = g_currentUser.getId();
-    // js["name"] = g_currentUser.getName();
-    // js["groupid"] = groupid;
-    // js["msg"] = message;
-    // js["time"] = getCurrentTime();
-    // string buffer = js.dump();
-    Ye_Interface::ChatMsg chat_msg;
-    
+    Ye_Interface::GroupMsg group_msg;
+    group_msg.set_from_user_id(_currentUser.GetId());
+    group_msg.set_user_name(_currentUser.GetName());
+    group_msg.set_group_id(groupid);
+    group_msg.set_msg(message);
+    group_msg.set_time(getCurrentTime());
+    std::string buffer;
 
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
