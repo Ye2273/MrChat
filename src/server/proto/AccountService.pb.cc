@@ -39,6 +39,10 @@ class LogoutResponseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LogoutResponse> _instance;
 } _LogoutResponse_default_instance_;
+class UserDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<User> _instance;
+} _User_default_instance_;
 }  // namespace Ye_AccountService
 static void InitDefaultsscc_info_LoginRequest_AccountService_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -124,7 +128,21 @@ static void InitDefaultsscc_info_RegisterResponse_AccountService_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_RegisterResponse_AccountService_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_RegisterResponse_AccountService_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AccountService_2eproto[6];
+static void InitDefaultsscc_info_User_AccountService_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Ye_AccountService::_User_default_instance_;
+    new (ptr) ::Ye_AccountService::User();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::Ye_AccountService::User::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_User_AccountService_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_User_AccountService_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_AccountService_2eproto[7];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_AccountService_2eproto = nullptr;
 static const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* file_level_service_descriptors_AccountService_2eproto[1];
 
@@ -136,6 +154,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AccountService_2eproto::offset
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginRequest, id_),
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginRequest, password_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginRequest, msg_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -145,6 +164,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AccountService_2eproto::offset
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginResponse, id_),
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginResponse, msg_),
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginResponse, offline_msg_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LoginResponse, name_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::RegisterRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -152,6 +172,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AccountService_2eproto::offset
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::RegisterRequest, name_),
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::RegisterRequest, password_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::RegisterRequest, msg_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::RegisterResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -174,14 +195,25 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_AccountService_2eproto::offset
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LogoutResponse, is_success_),
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LogoutResponse, id_),
   PROTOBUF_FIELD_OFFSET(::Ye_AccountService::LogoutResponse, msg_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::User, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::User, id_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::User, name_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::User, password_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::User, friends_),
+  PROTOBUF_FIELD_OFFSET(::Ye_AccountService::User, offline_msg_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::Ye_AccountService::LoginRequest)},
-  { 7, -1, sizeof(::Ye_AccountService::LoginResponse)},
-  { 16, -1, sizeof(::Ye_AccountService::RegisterRequest)},
-  { 23, -1, sizeof(::Ye_AccountService::RegisterResponse)},
-  { 31, -1, sizeof(::Ye_AccountService::LogoutRequest)},
-  { 37, -1, sizeof(::Ye_AccountService::LogoutResponse)},
+  { 8, -1, sizeof(::Ye_AccountService::LoginResponse)},
+  { 18, -1, sizeof(::Ye_AccountService::RegisterRequest)},
+  { 26, -1, sizeof(::Ye_AccountService::RegisterResponse)},
+  { 34, -1, sizeof(::Ye_AccountService::LogoutRequest)},
+  { 40, -1, sizeof(::Ye_AccountService::LogoutResponse)},
+  { 48, -1, sizeof(::Ye_AccountService::User)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -191,44 +223,49 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Ye_AccountService::_RegisterResponse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Ye_AccountService::_LogoutRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Ye_AccountService::_LogoutResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Ye_AccountService::_User_default_instance_),
 };
 
 const char descriptor_table_protodef_AccountService_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\024AccountService.proto\022\021Ye_AccountServic"
-  "e\",\n\014LoginRequest\022\n\n\002id\030\001 \001(\005\022\020\n\010passwor"
-  "d\030\002 \001(\014\"Q\n\rLoginResponse\022\022\n\nis_success\030\001"
-  " \001(\010\022\n\n\002id\030\002 \001(\005\022\013\n\003msg\030\003 \001(\014\022\023\n\013offline"
-  "_msg\030\004 \003(\014\"1\n\017RegisterRequest\022\014\n\004name\030\001 "
-  "\001(\014\022\020\n\010password\030\002 \001(\014\"\?\n\020RegisterRespons"
+  "e\"9\n\014LoginRequest\022\n\n\002id\030\001 \001(\005\022\020\n\010passwor"
+  "d\030\002 \001(\014\022\013\n\003msg\030\003 \001(\014\"_\n\rLoginResponse\022\022\n"
+  "\nis_success\030\001 \001(\010\022\n\n\002id\030\002 \001(\005\022\013\n\003msg\030\003 \001"
+  "(\014\022\023\n\013offline_msg\030\004 \003(\014\022\014\n\004name\030\005 \001(\014\">\n"
+  "\017RegisterRequest\022\014\n\004name\030\001 \001(\014\022\020\n\010passwo"
+  "rd\030\002 \001(\014\022\013\n\003msg\030\003 \001(\014\"\?\n\020RegisterRespons"
   "e\022\022\n\nis_success\030\001 \001(\010\022\n\n\002id\030\002 \001(\005\022\013\n\003msg"
   "\030\003 \001(\014\"\033\n\rLogoutRequest\022\n\n\002id\030\001 \001(\005\"=\n\016L"
   "ogoutResponse\022\022\n\nis_success\030\001 \001(\010\022\n\n\002id\030"
-  "\002 \001(\005\022\013\n\003msg\030\003 \001(\0142\203\002\n\021AccountServiceRpc"
-  "\022J\n\005Login\022\037.Ye_AccountService.LoginReque"
-  "st\032 .Ye_AccountService.LoginResponse\022S\n\010"
-  "Register\022\".Ye_AccountService.RegisterReq"
-  "uest\032#.Ye_AccountService.RegisterRespons"
-  "e\022M\n\006Logout\022 .Ye_AccountService.LogoutRe"
-  "quest\032!.Ye_AccountService.LogoutResponse"
-  "B\003\200\001\001b\006proto3"
+  "\002 \001(\005\022\013\n\003msg\030\003 \001(\014\"X\n\004User\022\n\n\002id\030\001 \001(\005\022\014"
+  "\n\004name\030\002 \001(\014\022\020\n\010password\030\003 \001(\014\022\017\n\007friend"
+  "s\030\004 \003(\005\022\023\n\013offline_msg\030\005 \003(\0142\203\002\n\021Account"
+  "ServiceRpc\022J\n\005Login\022\037.Ye_AccountService."
+  "LoginRequest\032 .Ye_AccountService.LoginRe"
+  "sponse\022S\n\010Register\022\".Ye_AccountService.R"
+  "egisterRequest\032#.Ye_AccountService.Regis"
+  "terResponse\022M\n\006Logout\022 .Ye_AccountServic"
+  "e.LogoutRequest\032!.Ye_AccountService.Logo"
+  "utResponseB\003\200\001\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_AccountService_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AccountService_2eproto_sccs[6] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_AccountService_2eproto_sccs[7] = {
   &scc_info_LoginRequest_AccountService_2eproto.base,
   &scc_info_LoginResponse_AccountService_2eproto.base,
   &scc_info_LogoutRequest_AccountService_2eproto.base,
   &scc_info_LogoutResponse_AccountService_2eproto.base,
   &scc_info_RegisterRequest_AccountService_2eproto.base,
   &scc_info_RegisterResponse_AccountService_2eproto.base,
+  &scc_info_User_AccountService_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_AccountService_2eproto_once;
 static bool descriptor_table_AccountService_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_AccountService_2eproto = {
-  &descriptor_table_AccountService_2eproto_initialized, descriptor_table_protodef_AccountService_2eproto, "AccountService.proto", 653,
-  &descriptor_table_AccountService_2eproto_once, descriptor_table_AccountService_2eproto_sccs, descriptor_table_AccountService_2eproto_deps, 6, 0,
+  &descriptor_table_AccountService_2eproto_initialized, descriptor_table_protodef_AccountService_2eproto, "AccountService.proto", 783,
+  &descriptor_table_AccountService_2eproto_once, descriptor_table_AccountService_2eproto_sccs, descriptor_table_AccountService_2eproto_deps, 7, 0,
   schemas, file_default_instances, TableStruct_AccountService_2eproto::offsets,
-  file_level_metadata_AccountService_2eproto, 6, file_level_enum_descriptors_AccountService_2eproto, file_level_service_descriptors_AccountService_2eproto,
+  file_level_metadata_AccountService_2eproto, 7, file_level_enum_descriptors_AccountService_2eproto, file_level_service_descriptors_AccountService_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -256,6 +293,10 @@ LoginRequest::LoginRequest(const LoginRequest& from)
   if (!from._internal_password().empty()) {
     password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
   }
+  msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_msg().empty()) {
+    msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
+  }
   id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:Ye_AccountService.LoginRequest)
 }
@@ -263,6 +304,7 @@ LoginRequest::LoginRequest(const LoginRequest& from)
 void LoginRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LoginRequest_AccountService_2eproto.base);
   password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   id_ = 0;
 }
 
@@ -273,6 +315,7 @@ LoginRequest::~LoginRequest() {
 
 void LoginRequest::SharedDtor() {
   password_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  msg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void LoginRequest::SetCachedSize(int size) const {
@@ -291,6 +334,7 @@ void LoginRequest::Clear() {
   (void) cached_has_bits;
 
   password_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   id_ = 0;
   _internal_metadata_.Clear();
 }
@@ -313,6 +357,14 @@ const char* LoginRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_I
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_password();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes msg = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_msg();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -355,6 +407,12 @@ failure:
         2, this->_internal_password(), target);
   }
 
+  // bytes msg = 3;
+  if (this->msg().size() > 0) {
+    target = stream->WriteBytesMaybeAliased(
+        3, this->_internal_msg(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -376,6 +434,13 @@ size_t LoginRequest::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_password());
+  }
+
+  // bytes msg = 3;
+  if (this->msg().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_msg());
   }
 
   // int32 id = 1;
@@ -420,6 +485,10 @@ void LoginRequest::MergeFrom(const LoginRequest& from) {
 
     password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
   }
+  if (from.msg().size() > 0) {
+
+    msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
+  }
   if (from.id() != 0) {
     _internal_set_id(from._internal_id());
   }
@@ -447,6 +516,8 @@ void LoginRequest::InternalSwap(LoginRequest* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
   password_.Swap(&other->password_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(id_, other->id_);
 }
@@ -478,6 +549,10 @@ LoginResponse::LoginResponse(const LoginResponse& from)
   if (!from._internal_msg().empty()) {
     msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
   }
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
   ::memcpy(&is_success_, &from.is_success_,
     static_cast<size_t>(reinterpret_cast<char*>(&id_) -
     reinterpret_cast<char*>(&is_success_)) + sizeof(id_));
@@ -487,6 +562,7 @@ LoginResponse::LoginResponse(const LoginResponse& from)
 void LoginResponse::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_LoginResponse_AccountService_2eproto.base);
   msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&is_success_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&id_) -
       reinterpret_cast<char*>(&is_success_)) + sizeof(id_));
@@ -499,6 +575,7 @@ LoginResponse::~LoginResponse() {
 
 void LoginResponse::SharedDtor() {
   msg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void LoginResponse::SetCachedSize(int size) const {
@@ -518,6 +595,7 @@ void LoginResponse::Clear() {
 
   offline_msg_.Clear();
   msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(&is_success_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&id_) -
       reinterpret_cast<char*>(&is_success_)) + sizeof(id_));
@@ -564,6 +642,14 @@ const char* LoginResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // bytes name = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
@@ -616,6 +702,12 @@ failure:
     target = stream->WriteBytes(4, s, target);
   }
 
+  // bytes name = 5;
+  if (this->name().size() > 0) {
+    target = stream->WriteBytesMaybeAliased(
+        5, this->_internal_name(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -645,6 +737,13 @@ size_t LoginResponse::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_msg());
+  }
+
+  // bytes name = 5;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_name());
   }
 
   // bool is_success = 1;
@@ -695,6 +794,10 @@ void LoginResponse::MergeFrom(const LoginResponse& from) {
 
     msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
   }
+  if (from.name().size() > 0) {
+
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
   if (from.is_success() != 0) {
     _internal_set_is_success(from._internal_is_success());
   }
@@ -726,6 +829,8 @@ void LoginResponse::InternalSwap(LoginResponse* other) {
   _internal_metadata_.Swap(&other->_internal_metadata_);
   offline_msg_.InternalSwap(&other->offline_msg_);
   msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(is_success_, other->is_success_);
   swap(id_, other->id_);
@@ -761,6 +866,10 @@ RegisterRequest::RegisterRequest(const RegisterRequest& from)
   if (!from._internal_password().empty()) {
     password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
   }
+  msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_msg().empty()) {
+    msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
+  }
   // @@protoc_insertion_point(copy_constructor:Ye_AccountService.RegisterRequest)
 }
 
@@ -768,6 +877,7 @@ void RegisterRequest::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_RegisterRequest_AccountService_2eproto.base);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 RegisterRequest::~RegisterRequest() {
@@ -778,6 +888,7 @@ RegisterRequest::~RegisterRequest() {
 void RegisterRequest::SharedDtor() {
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   password_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  msg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void RegisterRequest::SetCachedSize(int size) const {
@@ -797,6 +908,7 @@ void RegisterRequest::Clear() {
 
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   password_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   _internal_metadata_.Clear();
 }
 
@@ -819,6 +931,14 @@ const char* RegisterRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_password();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes msg = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_msg();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -861,6 +981,12 @@ failure:
         2, this->_internal_password(), target);
   }
 
+  // bytes msg = 3;
+  if (this->msg().size() > 0) {
+    target = stream->WriteBytesMaybeAliased(
+        3, this->_internal_msg(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target, stream);
@@ -889,6 +1015,13 @@ size_t RegisterRequest::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
         this->_internal_password());
+  }
+
+  // bytes msg = 3;
+  if (this->msg().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_msg());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -930,6 +1063,10 @@ void RegisterRequest::MergeFrom(const RegisterRequest& from) {
 
     password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
   }
+  if (from.msg().size() > 0) {
+
+    msg_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.msg_);
+  }
 }
 
 void RegisterRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -956,6 +1093,8 @@ void RegisterRequest::InternalSwap(RegisterRequest* other) {
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   password_.Swap(&other->password_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
 }
 
@@ -1650,6 +1789,330 @@ void LogoutResponse::InternalSwap(LogoutResponse* other) {
 
 // ===================================================================
 
+void User::InitAsDefaultInstance() {
+}
+class User::_Internal {
+ public:
+};
+
+User::User()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:Ye_AccountService.User)
+}
+User::User(const User& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr),
+      friends_(from.friends_),
+      offline_msg_(from.offline_msg_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_password().empty()) {
+    password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
+  }
+  id_ = from.id_;
+  // @@protoc_insertion_point(copy_constructor:Ye_AccountService.User)
+}
+
+void User::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_User_AccountService_2eproto.base);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  password_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  id_ = 0;
+}
+
+User::~User() {
+  // @@protoc_insertion_point(destructor:Ye_AccountService.User)
+  SharedDtor();
+}
+
+void User::SharedDtor() {
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  password_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void User::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const User& User::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_User_AccountService_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void User::Clear() {
+// @@protoc_insertion_point(message_clear_start:Ye_AccountService.User)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  friends_.Clear();
+  offline_msg_.Clear();
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  password_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  id_ = 0;
+  _internal_metadata_.Clear();
+}
+
+const char* User::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // int32 id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes name = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // bytes password = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_password();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated int32 friends = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(_internal_mutable_friends(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32) {
+          _internal_add_friends(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated bytes offline_msg = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_offline_msg();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* User::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Ye_AccountService.User)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 id = 1;
+  if (this->id() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_id(), target);
+  }
+
+  // bytes name = 2;
+  if (this->name().size() > 0) {
+    target = stream->WriteBytesMaybeAliased(
+        2, this->_internal_name(), target);
+  }
+
+  // bytes password = 3;
+  if (this->password().size() > 0) {
+    target = stream->WriteBytesMaybeAliased(
+        3, this->_internal_password(), target);
+  }
+
+  // repeated int32 friends = 4;
+  {
+    int byte_size = _friends_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteInt32Packed(
+          4, _internal_friends(), byte_size, target);
+    }
+  }
+
+  // repeated bytes offline_msg = 5;
+  for (int i = 0, n = this->_internal_offline_msg_size(); i < n; i++) {
+    const auto& s = this->_internal_offline_msg(i);
+    target = stream->WriteBytes(5, s, target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Ye_AccountService.User)
+  return target;
+}
+
+size_t User::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Ye_AccountService.User)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated int32 friends = 4;
+  {
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      Int32Size(this->friends_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _friends_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated bytes offline_msg = 5;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(offline_msg_.size());
+  for (int i = 0, n = offline_msg_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+      offline_msg_.Get(i));
+  }
+
+  // bytes name = 2;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_name());
+  }
+
+  // bytes password = 3;
+  if (this->password().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::BytesSize(
+        this->_internal_password());
+  }
+
+  // int32 id = 1;
+  if (this->id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_id());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void User::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Ye_AccountService.User)
+  GOOGLE_DCHECK_NE(&from, this);
+  const User* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<User>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Ye_AccountService.User)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Ye_AccountService.User)
+    MergeFrom(*source);
+  }
+}
+
+void User::MergeFrom(const User& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Ye_AccountService.User)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  friends_.MergeFrom(from.friends_);
+  offline_msg_.MergeFrom(from.offline_msg_);
+  if (from.name().size() > 0) {
+
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  if (from.password().size() > 0) {
+
+    password_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.password_);
+  }
+  if (from.id() != 0) {
+    _internal_set_id(from._internal_id());
+  }
+}
+
+void User::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Ye_AccountService.User)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void User::CopyFrom(const User& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Ye_AccountService.User)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool User::IsInitialized() const {
+  return true;
+}
+
+void User::InternalSwap(User* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  friends_.InternalSwap(&other->friends_);
+  offline_msg_.InternalSwap(&other->offline_msg_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  password_.Swap(&other->password_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(id_, other->id_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata User::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 AccountServiceRpc::~AccountServiceRpc() {}
 
 const ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor* AccountServiceRpc::descriptor() {
@@ -1809,6 +2272,9 @@ template<> PROTOBUF_NOINLINE ::Ye_AccountService::LogoutRequest* Arena::CreateMa
 }
 template<> PROTOBUF_NOINLINE ::Ye_AccountService::LogoutResponse* Arena::CreateMaybeMessage< ::Ye_AccountService::LogoutResponse >(Arena* arena) {
   return Arena::CreateInternal< ::Ye_AccountService::LogoutResponse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::Ye_AccountService::User* Arena::CreateMaybeMessage< ::Ye_AccountService::User >(Arena* arena) {
+  return Arena::CreateInternal< ::Ye_AccountService::User >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

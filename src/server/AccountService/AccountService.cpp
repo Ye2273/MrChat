@@ -50,6 +50,7 @@ void AccountService::Login(::google::protobuf::RpcController *controller,
         {
             response->set_is_success(true);
             response->set_id(user.GetId());
+            response->set_name(user.GetName());
             user.SetState("online");
             _userService.UpdateState(user);
 

@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/ye/MrChat/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -110,14 +110,180 @@ depend:
 	cd /home/ye/MrChat/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/server/GroupService/CMakeFiles/group.dir/rule:
+	cd /home/ye/MrChat/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/GroupService/CMakeFiles/group.dir/rule
+.PHONY : src/server/GroupService/CMakeFiles/group.dir/rule
+
+# Convenience name for target.
+group: src/server/GroupService/CMakeFiles/group.dir/rule
+
+.PHONY : group
+
+# fast build rule for target.
+group/fast:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/build
+.PHONY : group/fast
+
+GroupService.o: GroupService.cpp.o
+
+.PHONY : GroupService.o
+
+# target to build an object file
+GroupService.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/GroupService.cpp.o
+.PHONY : GroupService.cpp.o
+
+GroupService.i: GroupService.cpp.i
+
+.PHONY : GroupService.i
+
+# target to preprocess a source file
+GroupService.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/GroupService.cpp.i
+.PHONY : GroupService.cpp.i
+
+GroupService.s: GroupService.cpp.s
+
+.PHONY : GroupService.s
+
+# target to generate assembly for a file
+GroupService.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/GroupService.cpp.s
+.PHONY : GroupService.cpp.s
+
+__/db/MySQL.o: __/db/MySQL.cpp.o
+
+.PHONY : __/db/MySQL.o
+
+# target to build an object file
+__/db/MySQL.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/db/MySQL.cpp.o
+.PHONY : __/db/MySQL.cpp.o
+
+__/db/MySQL.i: __/db/MySQL.cpp.i
+
+.PHONY : __/db/MySQL.i
+
+# target to preprocess a source file
+__/db/MySQL.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/db/MySQL.cpp.i
+.PHONY : __/db/MySQL.cpp.i
+
+__/db/MySQL.s: __/db/MySQL.cpp.s
+
+.PHONY : __/db/MySQL.s
+
+# target to generate assembly for a file
+__/db/MySQL.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/db/MySQL.cpp.s
+.PHONY : __/db/MySQL.cpp.s
+
+__/proto/GroupService.pb.o: __/proto/GroupService.pb.cc.o
+
+.PHONY : __/proto/GroupService.pb.o
+
+# target to build an object file
+__/proto/GroupService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o
+.PHONY : __/proto/GroupService.pb.cc.o
+
+__/proto/GroupService.pb.i: __/proto/GroupService.pb.cc.i
+
+.PHONY : __/proto/GroupService.pb.i
+
+# target to preprocess a source file
+__/proto/GroupService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.i
+.PHONY : __/proto/GroupService.pb.cc.i
+
+__/proto/GroupService.pb.s: __/proto/GroupService.pb.cc.s
+
+.PHONY : __/proto/GroupService.pb.s
+
+# target to generate assembly for a file
+__/proto/GroupService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.s
+.PHONY : __/proto/GroupService.pb.cc.s
+
+__/user/UserService.o: __/user/UserService.cpp.o
+
+.PHONY : __/user/UserService.o
+
+# target to build an object file
+__/user/UserService.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.o
+.PHONY : __/user/UserService.cpp.o
+
+__/user/UserService.i: __/user/UserService.cpp.i
+
+.PHONY : __/user/UserService.i
+
+# target to preprocess a source file
+__/user/UserService.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.i
+.PHONY : __/user/UserService.cpp.i
+
+__/user/UserService.s: __/user/UserService.cpp.s
+
+.PHONY : __/user/UserService.s
+
+# target to generate assembly for a file
+__/user/UserService.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.s
+.PHONY : __/user/UserService.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... group"
+	@echo "... GroupService.o"
+	@echo "... GroupService.i"
+	@echo "... GroupService.s"
+	@echo "... __/db/MySQL.o"
+	@echo "... __/db/MySQL.i"
+	@echo "... __/db/MySQL.s"
+	@echo "... __/proto/GroupService.pb.o"
+	@echo "... __/proto/GroupService.pb.i"
+	@echo "... __/proto/GroupService.pb.s"
+	@echo "... __/user/UserService.o"
+	@echo "... __/user/UserService.i"
+	@echo "... __/user/UserService.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

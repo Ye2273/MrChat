@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -g  -rdynamic CMakeFiles/client.dir/Cient.cpp.o  -o ../../../bin/client   -L/usr/lib64/mysql  -Wl,-rpath,/usr/lib64/mysql -lMyRpc -lprotobuf -lpthread 

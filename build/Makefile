@@ -149,6 +149,32 @@ friend/fast:
 	$(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/build
 .PHONY : friend/fast
 
+#=============================================================================
+# Target rules for targets named group
+
+# Build rule for target.
+group: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 group
+.PHONY : group
+
+# fast build rule for target.
+group/fast:
+	$(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/build
+.PHONY : group/fast
+
+#=============================================================================
+# Target rules for targets named client
+
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client
+.PHONY : client
+
+# fast build rule for target.
+client/fast:
+	$(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/build
+.PHONY : client/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,6 +186,8 @@ help:
 	@echo "... MrChat"
 	@echo "... account"
 	@echo "... friend"
+	@echo "... group"
+	@echo "... client"
 .PHONY : help
 
 

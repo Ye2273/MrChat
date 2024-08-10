@@ -90,14 +90,19 @@ void InterfaceService::Register(const muduo::net::TcpConnectionPtr &conn, std::s
         return;
     }
     // 3. 处理返回结果
+    string send_str = register_response.SerializeAsString();
     if (register_response.is_success())
     {
         LOG_INFO << "Register success";
         LOG_INFO << "id: " << register_response.id();
+        //序列化并发送响应给客户端
+        conn->send(send_str);
     }
     else
     {
         LOG_ERROR << "Register failed: " << register_response.msg();
+        //序列化并发送响应给客户端
+        conn->send(send_str);
     }
 }
 
@@ -329,7 +334,7 @@ void InterfaceService::GroupList(const muduo::net::TcpConnectionPtr &conn, std::
 // 处理获取群组用户id列表业务
 void InterfaceService::GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)
 {
-    // 1. 构造rpc请求
+    // 1. 构造rpc请求(要反序列化recv_buf)
     Ye_GroupService::GetGroupUsersRequest group_request;
     group_request.set_group_id(1);
     group_request.set_userid(2);
@@ -349,7 +354,9 @@ void InterfaceService::GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, s
     {
         LOG_INFO << "Get group users success";
         lock_guard<mutex> lock(_connMutex);
-
+        // 4.序列化并发送响应给客户端
+        // string send_str = add_response.SerializeAsString();
+        // conn->send(send_str);
         for (int i = 0; i < group_response.users_size(); ++i)
         {
             const Ye_GroupService::UserId &user_info = group_response.users(i);

@@ -48,7 +48,7 @@ struct TableStruct_AccountService_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[6]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[7]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -74,6 +74,9 @@ extern RegisterRequestDefaultTypeInternal _RegisterRequest_default_instance_;
 class RegisterResponse;
 class RegisterResponseDefaultTypeInternal;
 extern RegisterResponseDefaultTypeInternal _RegisterResponse_default_instance_;
+class User;
+class UserDefaultTypeInternal;
+extern UserDefaultTypeInternal _User_default_instance_;
 }  // namespace Ye_AccountService
 PROTOBUF_NAMESPACE_OPEN
 template<> ::Ye_AccountService::LoginRequest* Arena::CreateMaybeMessage<::Ye_AccountService::LoginRequest>(Arena*);
@@ -82,6 +85,7 @@ template<> ::Ye_AccountService::LogoutRequest* Arena::CreateMaybeMessage<::Ye_Ac
 template<> ::Ye_AccountService::LogoutResponse* Arena::CreateMaybeMessage<::Ye_AccountService::LogoutResponse>(Arena*);
 template<> ::Ye_AccountService::RegisterRequest* Arena::CreateMaybeMessage<::Ye_AccountService::RegisterRequest>(Arena*);
 template<> ::Ye_AccountService::RegisterResponse* Arena::CreateMaybeMessage<::Ye_AccountService::RegisterResponse>(Arena*);
+template<> ::Ye_AccountService::User* Arena::CreateMaybeMessage<::Ye_AccountService::User>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace Ye_AccountService {
 
@@ -194,6 +198,7 @@ class LoginRequest :
 
   enum : int {
     kPasswordFieldNumber = 2,
+    kMsgFieldNumber = 3,
     kIdFieldNumber = 1,
   };
   // bytes password = 2;
@@ -212,6 +217,22 @@ class LoginRequest :
   std::string* _internal_mutable_password();
   public:
 
+  // bytes msg = 3;
+  void clear_msg();
+  const std::string& msg() const;
+  void set_msg(const std::string& value);
+  void set_msg(std::string&& value);
+  void set_msg(const char* value);
+  void set_msg(const void* value, size_t size);
+  std::string* mutable_msg();
+  std::string* release_msg();
+  void set_allocated_msg(std::string* msg);
+  private:
+  const std::string& _internal_msg() const;
+  void _internal_set_msg(const std::string& value);
+  std::string* _internal_mutable_msg();
+  public:
+
   // int32 id = 1;
   void clear_id();
   ::PROTOBUF_NAMESPACE_ID::int32 id() const;
@@ -227,6 +248,7 @@ class LoginRequest :
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AccountService_2eproto;
@@ -341,6 +363,7 @@ class LoginResponse :
   enum : int {
     kOfflineMsgFieldNumber = 4,
     kMsgFieldNumber = 3,
+    kNameFieldNumber = 5,
     kIsSuccessFieldNumber = 1,
     kIdFieldNumber = 2,
   };
@@ -384,6 +407,22 @@ class LoginResponse :
   std::string* _internal_mutable_msg();
   public:
 
+  // bytes name = 5;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const void* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
   // bool is_success = 1;
   void clear_is_success();
   bool is_success() const;
@@ -409,6 +448,7 @@ class LoginResponse :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> offline_msg_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   bool is_success_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -524,6 +564,7 @@ class RegisterRequest :
   enum : int {
     kNameFieldNumber = 1,
     kPasswordFieldNumber = 2,
+    kMsgFieldNumber = 3,
   };
   // bytes name = 1;
   void clear_name();
@@ -557,6 +598,22 @@ class RegisterRequest :
   std::string* _internal_mutable_password();
   public:
 
+  // bytes msg = 3;
+  void clear_msg();
+  const std::string& msg() const;
+  void set_msg(const std::string& value);
+  void set_msg(std::string&& value);
+  void set_msg(const char* value);
+  void set_msg(const void* value, size_t size);
+  std::string* mutable_msg();
+  std::string* release_msg();
+  void set_allocated_msg(std::string* msg);
+  private:
+  const std::string& _internal_msg() const;
+  void _internal_set_msg(const std::string& value);
+  std::string* _internal_mutable_msg();
+  public:
+
   // @@protoc_insertion_point(class_scope:Ye_AccountService.RegisterRequest)
  private:
   class _Internal;
@@ -564,6 +621,7 @@ class RegisterRequest :
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AccountService_2eproto;
 };
@@ -1009,6 +1067,221 @@ class LogoutResponse :
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_AccountService_2eproto;
 };
+// -------------------------------------------------------------------
+
+class User :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Ye_AccountService.User) */ {
+ public:
+  User();
+  virtual ~User();
+
+  User(const User& from);
+  User(User&& from) noexcept
+    : User() {
+    *this = ::std::move(from);
+  }
+
+  inline User& operator=(const User& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline User& operator=(User&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const User& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const User* internal_default_instance() {
+    return reinterpret_cast<const User*>(
+               &_User_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(User& a, User& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(User* other) {
+    if (other == this) return;
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline User* New() const final {
+    return CreateMaybeMessage<User>(nullptr);
+  }
+
+  User* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<User>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const User& from);
+  void MergeFrom(const User& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(User* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Ye_AccountService.User";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_AccountService_2eproto);
+    return ::descriptor_table_AccountService_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kFriendsFieldNumber = 4,
+    kOfflineMsgFieldNumber = 5,
+    kNameFieldNumber = 2,
+    kPasswordFieldNumber = 3,
+    kIdFieldNumber = 1,
+  };
+  // repeated int32 friends = 4;
+  int friends_size() const;
+  private:
+  int _internal_friends_size() const;
+  public:
+  void clear_friends();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_friends(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
+      _internal_friends() const;
+  void _internal_add_friends(::PROTOBUF_NAMESPACE_ID::int32 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
+      _internal_mutable_friends();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::int32 friends(int index) const;
+  void set_friends(int index, ::PROTOBUF_NAMESPACE_ID::int32 value);
+  void add_friends(::PROTOBUF_NAMESPACE_ID::int32 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
+      friends() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
+      mutable_friends();
+
+  // repeated bytes offline_msg = 5;
+  int offline_msg_size() const;
+  private:
+  int _internal_offline_msg_size() const;
+  public:
+  void clear_offline_msg();
+  const std::string& offline_msg(int index) const;
+  std::string* mutable_offline_msg(int index);
+  void set_offline_msg(int index, const std::string& value);
+  void set_offline_msg(int index, std::string&& value);
+  void set_offline_msg(int index, const char* value);
+  void set_offline_msg(int index, const void* value, size_t size);
+  std::string* add_offline_msg();
+  void add_offline_msg(const std::string& value);
+  void add_offline_msg(std::string&& value);
+  void add_offline_msg(const char* value);
+  void add_offline_msg(const void* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& offline_msg() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_offline_msg();
+  private:
+  const std::string& _internal_offline_msg(int index) const;
+  std::string* _internal_add_offline_msg();
+  public:
+
+  // bytes name = 2;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const void* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // bytes password = 3;
+  void clear_password();
+  const std::string& password() const;
+  void set_password(const std::string& value);
+  void set_password(std::string&& value);
+  void set_password(const char* value);
+  void set_password(const void* value, size_t size);
+  std::string* mutable_password();
+  std::string* release_password();
+  void set_allocated_password(std::string* password);
+  private:
+  const std::string& _internal_password() const;
+  void _internal_set_password(const std::string& value);
+  std::string* _internal_mutable_password();
+  public:
+
+  // int32 id = 1;
+  void clear_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
+  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
+  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:Ye_AccountService.User)
+ private:
+  class _Internal;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 > friends_;
+  mutable std::atomic<int> _friends_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> offline_msg_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
+  ::PROTOBUF_NAMESPACE_ID::int32 id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_AccountService_2eproto;
+};
 // ===================================================================
 
 class AccountServiceRpc_Stub;
@@ -1173,6 +1446,66 @@ inline void LoginRequest::set_allocated_password(std::string* password) {
   }
   password_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password);
   // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.LoginRequest.password)
+}
+
+// bytes msg = 3;
+inline void LoginRequest::clear_msg() {
+  msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& LoginRequest::msg() const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.LoginRequest.msg)
+  return _internal_msg();
+}
+inline void LoginRequest::set_msg(const std::string& value) {
+  _internal_set_msg(value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.LoginRequest.msg)
+}
+inline std::string* LoginRequest::mutable_msg() {
+  // @@protoc_insertion_point(field_mutable:Ye_AccountService.LoginRequest.msg)
+  return _internal_mutable_msg();
+}
+inline const std::string& LoginRequest::_internal_msg() const {
+  return msg_.GetNoArena();
+}
+inline void LoginRequest::_internal_set_msg(const std::string& value) {
+  
+  msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void LoginRequest::set_msg(std::string&& value) {
+  
+  msg_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Ye_AccountService.LoginRequest.msg)
+}
+inline void LoginRequest::set_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Ye_AccountService.LoginRequest.msg)
+}
+inline void LoginRequest::set_msg(const void* value, size_t size) {
+  
+  msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Ye_AccountService.LoginRequest.msg)
+}
+inline std::string* LoginRequest::_internal_mutable_msg() {
+  
+  return msg_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* LoginRequest::release_msg() {
+  // @@protoc_insertion_point(field_release:Ye_AccountService.LoginRequest.msg)
+  
+  return msg_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void LoginRequest::set_allocated_msg(std::string* msg) {
+  if (msg != nullptr) {
+    
+  } else {
+    
+  }
+  msg_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), msg);
+  // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.LoginRequest.msg)
 }
 
 // -------------------------------------------------------------------
@@ -1353,6 +1686,66 @@ LoginResponse::mutable_offline_msg() {
   return &offline_msg_;
 }
 
+// bytes name = 5;
+inline void LoginResponse::clear_name() {
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& LoginResponse::name() const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.LoginResponse.name)
+  return _internal_name();
+}
+inline void LoginResponse::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.LoginResponse.name)
+}
+inline std::string* LoginResponse::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Ye_AccountService.LoginResponse.name)
+  return _internal_mutable_name();
+}
+inline const std::string& LoginResponse::_internal_name() const {
+  return name_.GetNoArena();
+}
+inline void LoginResponse::_internal_set_name(const std::string& value) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void LoginResponse::set_name(std::string&& value) {
+  
+  name_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Ye_AccountService.LoginResponse.name)
+}
+inline void LoginResponse::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Ye_AccountService.LoginResponse.name)
+}
+inline void LoginResponse::set_name(const void* value, size_t size) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Ye_AccountService.LoginResponse.name)
+}
+inline std::string* LoginResponse::_internal_mutable_name() {
+  
+  return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* LoginResponse::release_name() {
+  // @@protoc_insertion_point(field_release:Ye_AccountService.LoginResponse.name)
+  
+  return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void LoginResponse::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.LoginResponse.name)
+}
+
 // -------------------------------------------------------------------
 
 // RegisterRequest
@@ -1475,6 +1868,66 @@ inline void RegisterRequest::set_allocated_password(std::string* password) {
   }
   password_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password);
   // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.RegisterRequest.password)
+}
+
+// bytes msg = 3;
+inline void RegisterRequest::clear_msg() {
+  msg_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& RegisterRequest::msg() const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.RegisterRequest.msg)
+  return _internal_msg();
+}
+inline void RegisterRequest::set_msg(const std::string& value) {
+  _internal_set_msg(value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.RegisterRequest.msg)
+}
+inline std::string* RegisterRequest::mutable_msg() {
+  // @@protoc_insertion_point(field_mutable:Ye_AccountService.RegisterRequest.msg)
+  return _internal_mutable_msg();
+}
+inline const std::string& RegisterRequest::_internal_msg() const {
+  return msg_.GetNoArena();
+}
+inline void RegisterRequest::_internal_set_msg(const std::string& value) {
+  
+  msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void RegisterRequest::set_msg(std::string&& value) {
+  
+  msg_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Ye_AccountService.RegisterRequest.msg)
+}
+inline void RegisterRequest::set_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Ye_AccountService.RegisterRequest.msg)
+}
+inline void RegisterRequest::set_msg(const void* value, size_t size) {
+  
+  msg_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Ye_AccountService.RegisterRequest.msg)
+}
+inline std::string* RegisterRequest::_internal_mutable_msg() {
+  
+  return msg_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* RegisterRequest::release_msg() {
+  // @@protoc_insertion_point(field_release:Ye_AccountService.RegisterRequest.msg)
+  
+  return msg_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void RegisterRequest::set_allocated_msg(std::string* msg) {
+  if (msg != nullptr) {
+    
+  } else {
+    
+  }
+  msg_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), msg);
+  // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.RegisterRequest.msg)
 }
 
 // -------------------------------------------------------------------
@@ -1709,9 +2162,276 @@ inline void LogoutResponse::set_allocated_msg(std::string* msg) {
   // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.LogoutResponse.msg)
 }
 
+// -------------------------------------------------------------------
+
+// User
+
+// int32 id = 1;
+inline void User::clear_id() {
+  id_ = 0;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 User::_internal_id() const {
+  return id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 User::id() const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.User.id)
+  return _internal_id();
+}
+inline void User::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  
+  id_ = value;
+}
+inline void User::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.User.id)
+}
+
+// bytes name = 2;
+inline void User::clear_name() {
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& User::name() const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.User.name)
+  return _internal_name();
+}
+inline void User::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.User.name)
+}
+inline std::string* User::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Ye_AccountService.User.name)
+  return _internal_mutable_name();
+}
+inline const std::string& User::_internal_name() const {
+  return name_.GetNoArena();
+}
+inline void User::_internal_set_name(const std::string& value) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void User::set_name(std::string&& value) {
+  
+  name_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Ye_AccountService.User.name)
+}
+inline void User::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Ye_AccountService.User.name)
+}
+inline void User::set_name(const void* value, size_t size) {
+  
+  name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Ye_AccountService.User.name)
+}
+inline std::string* User::_internal_mutable_name() {
+  
+  return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* User::release_name() {
+  // @@protoc_insertion_point(field_release:Ye_AccountService.User.name)
+  
+  return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void User::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.User.name)
+}
+
+// bytes password = 3;
+inline void User::clear_password() {
+  password_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline const std::string& User::password() const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.User.password)
+  return _internal_password();
+}
+inline void User::set_password(const std::string& value) {
+  _internal_set_password(value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.User.password)
+}
+inline std::string* User::mutable_password() {
+  // @@protoc_insertion_point(field_mutable:Ye_AccountService.User.password)
+  return _internal_mutable_password();
+}
+inline const std::string& User::_internal_password() const {
+  return password_.GetNoArena();
+}
+inline void User::_internal_set_password(const std::string& value) {
+  
+  password_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
+}
+inline void User::set_password(std::string&& value) {
+  
+  password_.SetNoArena(
+    &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Ye_AccountService.User.password)
+}
+inline void User::set_password(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  password_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Ye_AccountService.User.password)
+}
+inline void User::set_password(const void* value, size_t size) {
+  
+  password_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Ye_AccountService.User.password)
+}
+inline std::string* User::_internal_mutable_password() {
+  
+  return password_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline std::string* User::release_password() {
+  // @@protoc_insertion_point(field_release:Ye_AccountService.User.password)
+  
+  return password_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+inline void User::set_allocated_password(std::string* password) {
+  if (password != nullptr) {
+    
+  } else {
+    
+  }
+  password_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password);
+  // @@protoc_insertion_point(field_set_allocated:Ye_AccountService.User.password)
+}
+
+// repeated int32 friends = 4;
+inline int User::_internal_friends_size() const {
+  return friends_.size();
+}
+inline int User::friends_size() const {
+  return _internal_friends_size();
+}
+inline void User::clear_friends() {
+  friends_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 User::_internal_friends(int index) const {
+  return friends_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 User::friends(int index) const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.User.friends)
+  return _internal_friends(index);
+}
+inline void User::set_friends(int index, ::PROTOBUF_NAMESPACE_ID::int32 value) {
+  friends_.Set(index, value);
+  // @@protoc_insertion_point(field_set:Ye_AccountService.User.friends)
+}
+inline void User::_internal_add_friends(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  friends_.Add(value);
+}
+inline void User::add_friends(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_add_friends(value);
+  // @@protoc_insertion_point(field_add:Ye_AccountService.User.friends)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
+User::_internal_friends() const {
+  return friends_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
+User::friends() const {
+  // @@protoc_insertion_point(field_list:Ye_AccountService.User.friends)
+  return _internal_friends();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
+User::_internal_mutable_friends() {
+  return &friends_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
+User::mutable_friends() {
+  // @@protoc_insertion_point(field_mutable_list:Ye_AccountService.User.friends)
+  return _internal_mutable_friends();
+}
+
+// repeated bytes offline_msg = 5;
+inline int User::_internal_offline_msg_size() const {
+  return offline_msg_.size();
+}
+inline int User::offline_msg_size() const {
+  return _internal_offline_msg_size();
+}
+inline void User::clear_offline_msg() {
+  offline_msg_.Clear();
+}
+inline std::string* User::add_offline_msg() {
+  // @@protoc_insertion_point(field_add_mutable:Ye_AccountService.User.offline_msg)
+  return _internal_add_offline_msg();
+}
+inline const std::string& User::_internal_offline_msg(int index) const {
+  return offline_msg_.Get(index);
+}
+inline const std::string& User::offline_msg(int index) const {
+  // @@protoc_insertion_point(field_get:Ye_AccountService.User.offline_msg)
+  return _internal_offline_msg(index);
+}
+inline std::string* User::mutable_offline_msg(int index) {
+  // @@protoc_insertion_point(field_mutable:Ye_AccountService.User.offline_msg)
+  return offline_msg_.Mutable(index);
+}
+inline void User::set_offline_msg(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:Ye_AccountService.User.offline_msg)
+  offline_msg_.Mutable(index)->assign(value);
+}
+inline void User::set_offline_msg(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:Ye_AccountService.User.offline_msg)
+  offline_msg_.Mutable(index)->assign(std::move(value));
+}
+inline void User::set_offline_msg(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  offline_msg_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Ye_AccountService.User.offline_msg)
+}
+inline void User::set_offline_msg(int index, const void* value, size_t size) {
+  offline_msg_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:Ye_AccountService.User.offline_msg)
+}
+inline std::string* User::_internal_add_offline_msg() {
+  return offline_msg_.Add();
+}
+inline void User::add_offline_msg(const std::string& value) {
+  offline_msg_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Ye_AccountService.User.offline_msg)
+}
+inline void User::add_offline_msg(std::string&& value) {
+  offline_msg_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Ye_AccountService.User.offline_msg)
+}
+inline void User::add_offline_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  offline_msg_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Ye_AccountService.User.offline_msg)
+}
+inline void User::add_offline_msg(const void* value, size_t size) {
+  offline_msg_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Ye_AccountService.User.offline_msg)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+User::offline_msg() const {
+  // @@protoc_insertion_point(field_list:Ye_AccountService.User.offline_msg)
+  return offline_msg_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+User::mutable_offline_msg() {
+  // @@protoc_insertion_point(field_mutable_list:Ye_AccountService.User.offline_msg)
+  return &offline_msg_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
