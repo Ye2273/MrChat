@@ -11,6 +11,5 @@ int main(int argc, char **argv) {
     rpcProvider.NotifyService(new FriendService());  
     std::cout << "FriendService start" << std::endl;
     rpcProvider.Run();
-    
     return 0;   
 }

@@ -24,6 +24,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include/server/AccountService"
   "../include/server/offlinemsg"
   "../include/server/FriendService"
+  "../include/server/GroupService"
   )
 
 # Targets to which this target links.

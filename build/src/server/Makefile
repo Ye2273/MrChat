@@ -314,6 +314,33 @@ proto/FriendService.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.s
 .PHONY : proto/FriendService.pb.cc.s
 
+proto/GroupService.pb.o: proto/GroupService.pb.cc.o
+
+.PHONY : proto/GroupService.pb.o
+
+# target to build an object file
+proto/GroupService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o
+.PHONY : proto/GroupService.pb.cc.o
+
+proto/GroupService.pb.i: proto/GroupService.pb.cc.i
+
+.PHONY : proto/GroupService.pb.i
+
+# target to preprocess a source file
+proto/GroupService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.i
+.PHONY : proto/GroupService.pb.cc.i
+
+proto/GroupService.pb.s: proto/GroupService.pb.cc.s
+
+.PHONY : proto/GroupService.pb.s
+
+# target to generate assembly for a file
+proto/GroupService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.s
+.PHONY : proto/GroupService.pb.cc.s
+
 proto/Interface.pb.o: proto/Interface.pb.cc.o
 
 .PHONY : proto/Interface.pb.o
@@ -398,6 +425,9 @@ help:
 	@echo "... proto/FriendService.pb.o"
 	@echo "... proto/FriendService.pb.i"
 	@echo "... proto/FriendService.pb.s"
+	@echo "... proto/GroupService.pb.o"
+	@echo "... proto/GroupService.pb.i"
+	@echo "... proto/GroupService.pb.s"
 	@echo "... proto/Interface.pb.o"
 	@echo "... proto/Interface.pb.i"
 	@echo "... proto/Interface.pb.s"

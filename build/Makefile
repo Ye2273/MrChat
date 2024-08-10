@@ -136,6 +136,19 @@ account/fast:
 	$(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/build
 .PHONY : account/fast
 
+#=============================================================================
+# Target rules for targets named friend
+
+# Build rule for target.
+friend: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 friend
+.PHONY : friend
+
+# fast build rule for target.
+friend/fast:
+	$(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/build
+.PHONY : friend/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -146,6 +159,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... MrChat"
 	@echo "... account"
+	@echo "... friend"
 .PHONY : help
 
 

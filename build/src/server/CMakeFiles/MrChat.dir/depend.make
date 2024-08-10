@@ -10,6 +10,7 @@ src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/in
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/AccountService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/FriendService.pb.h
+src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/GroupService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/proto/Interface.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/user/User.h
 src/server/CMakeFiles/MrChat.dir/interface/Interface.cpp.o: ../include/server/user/UserService.h
@@ -20,6 +21,7 @@ src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/se
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/proto/AccountService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/proto/FriendService.pb.h
+src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/proto/GroupService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/user/User.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../include/server/user/UserService.h
 src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o: ../src/server/interface/InterfaceService.cpp
@@ -30,6 +32,7 @@ src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/interfa
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/proto/AccountService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/proto/FriendService.pb.h
+src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/proto/GroupService.pb.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/user/User.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../include/server/user/UserService.h
 src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o: ../src/server/interface/main.cpp
@@ -43,6 +46,9 @@ src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o: ../src/server/pro
 
 src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o: ../include/server/proto/FriendService.pb.h
 src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o: ../src/server/proto/FriendService.pb.cc
+
+src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o: ../include/server/proto/GroupService.pb.h
+src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o: ../src/server/proto/GroupService.pb.cc
 
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o: ../include/server/proto/Interface.pb.h
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o: ../src/server/proto/Interface.pb.cc

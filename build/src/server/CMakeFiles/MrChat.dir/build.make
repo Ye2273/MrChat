@@ -135,9 +135,22 @@ src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.s"
 	cd /home/ye/MrChat/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/proto/FriendService.pb.cc -o CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.s
 
+src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o: src/server/CMakeFiles/MrChat.dir/flags.make
+src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o: ../src/server/proto/GroupService.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o"
+	cd /home/ye/MrChat/build/src/server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o -c /home/ye/MrChat/src/server/proto/GroupService.pb.cc
+
+src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.i"
+	cd /home/ye/MrChat/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/proto/GroupService.pb.cc > CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.i
+
+src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.s"
+	cd /home/ye/MrChat/build/src/server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/proto/GroupService.pb.cc -o CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.s
+
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o: src/server/CMakeFiles/MrChat.dir/flags.make
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o: ../src/server/proto/Interface.pb.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o"
 	cd /home/ye/MrChat/build/src/server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o -c /home/ye/MrChat/src/server/proto/Interface.pb.cc
 
 src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.i: cmake_force
@@ -150,7 +163,7 @@ src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.s: cmake_force
 
 src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o: src/server/CMakeFiles/MrChat.dir/flags.make
 src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o: ../src/server/user/UserService.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o"
 	cd /home/ye/MrChat/build/src/server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MrChat.dir/user/UserService.cpp.o -c /home/ye/MrChat/src/server/user/UserService.cpp
 
 src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.i: cmake_force
@@ -163,7 +176,7 @@ src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.s: cmake_force
 
 src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o: src/server/CMakeFiles/MrChat.dir/flags.make
 src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o: ../src/server/offlinemsg/OfflineMsg.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o"
 	cd /home/ye/MrChat/build/src/server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o -c /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
 
 src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.i: cmake_force
@@ -182,6 +195,7 @@ MrChat_OBJECTS = \
 "CMakeFiles/MrChat.dir/interface/main.cpp.o" \
 "CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o" \
 "CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o" \
+"CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o" \
 "CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o" \
 "CMakeFiles/MrChat.dir/user/UserService.cpp.o" \
 "CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o"
@@ -195,12 +209,13 @@ MrChat_EXTERNAL_OBJECTS =
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o
+../bin/MrChat: src/server/CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/user/UserService.cpp.o
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/build.make
 ../bin/MrChat: src/server/CMakeFiles/MrChat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable ../../../bin/MrChat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable ../../../bin/MrChat"
 	cd /home/ye/MrChat/build/src/server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MrChat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

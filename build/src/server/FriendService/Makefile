@@ -110,6 +110,156 @@ depend:
 	cd /home/ye/MrChat/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/server/FriendService/CMakeFiles/friend.dir/rule:
+	cd /home/ye/MrChat/build && $(MAKE) -f CMakeFiles/Makefile2 src/server/FriendService/CMakeFiles/friend.dir/rule
+.PHONY : src/server/FriendService/CMakeFiles/friend.dir/rule
+
+# Convenience name for target.
+friend: src/server/FriendService/CMakeFiles/friend.dir/rule
+
+.PHONY : friend
+
+# fast build rule for target.
+friend/fast:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/build
+.PHONY : friend/fast
+
+FriendService.o: FriendService.cpp.o
+
+.PHONY : FriendService.o
+
+# target to build an object file
+FriendService.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/FriendService.cpp.o
+.PHONY : FriendService.cpp.o
+
+FriendService.i: FriendService.cpp.i
+
+.PHONY : FriendService.i
+
+# target to preprocess a source file
+FriendService.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/FriendService.cpp.i
+.PHONY : FriendService.cpp.i
+
+FriendService.s: FriendService.cpp.s
+
+.PHONY : FriendService.s
+
+# target to generate assembly for a file
+FriendService.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/FriendService.cpp.s
+.PHONY : FriendService.cpp.s
+
+__/db/MySQL.o: __/db/MySQL.cpp.o
+
+.PHONY : __/db/MySQL.o
+
+# target to build an object file
+__/db/MySQL.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.o
+.PHONY : __/db/MySQL.cpp.o
+
+__/db/MySQL.i: __/db/MySQL.cpp.i
+
+.PHONY : __/db/MySQL.i
+
+# target to preprocess a source file
+__/db/MySQL.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.i
+.PHONY : __/db/MySQL.cpp.i
+
+__/db/MySQL.s: __/db/MySQL.cpp.s
+
+.PHONY : __/db/MySQL.s
+
+# target to generate assembly for a file
+__/db/MySQL.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.s
+.PHONY : __/db/MySQL.cpp.s
+
+__/proto/FriendService.pb.o: __/proto/FriendService.pb.cc.o
+
+.PHONY : __/proto/FriendService.pb.o
+
+# target to build an object file
+__/proto/FriendService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o
+.PHONY : __/proto/FriendService.pb.cc.o
+
+__/proto/FriendService.pb.i: __/proto/FriendService.pb.cc.i
+
+.PHONY : __/proto/FriendService.pb.i
+
+# target to preprocess a source file
+__/proto/FriendService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.i
+.PHONY : __/proto/FriendService.pb.cc.i
+
+__/proto/FriendService.pb.s: __/proto/FriendService.pb.cc.s
+
+.PHONY : __/proto/FriendService.pb.s
+
+# target to generate assembly for a file
+__/proto/FriendService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.s
+.PHONY : __/proto/FriendService.pb.cc.s
+
+__/user/UserService.o: __/user/UserService.cpp.o
+
+.PHONY : __/user/UserService.o
+
+# target to build an object file
+__/user/UserService.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.o
+.PHONY : __/user/UserService.cpp.o
+
+__/user/UserService.i: __/user/UserService.cpp.i
+
+.PHONY : __/user/UserService.i
+
+# target to preprocess a source file
+__/user/UserService.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.i
+.PHONY : __/user/UserService.cpp.i
+
+__/user/UserService.s: __/user/UserService.cpp.s
+
+.PHONY : __/user/UserService.s
+
+# target to generate assembly for a file
+__/user/UserService.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.s
+.PHONY : __/user/UserService.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -118,6 +268,22 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... friend"
+	@echo "... FriendService.o"
+	@echo "... FriendService.i"
+	@echo "... FriendService.s"
+	@echo "... __/db/MySQL.o"
+	@echo "... __/db/MySQL.i"
+	@echo "... __/db/MySQL.s"
+	@echo "... __/proto/FriendService.pb.o"
+	@echo "... __/proto/FriendService.pb.i"
+	@echo "... __/proto/FriendService.pb.s"
+	@echo "... __/user/UserService.o"
+	@echo "... __/user/UserService.i"
+	@echo "... __/user/UserService.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

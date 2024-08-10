@@ -13,6 +13,10 @@ InterfaceService::InterfaceService()
     _msgHandlerMap["chat"] = std::bind(&InterfaceService::Chat, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     _msgHandlerMap["addfriend"] = std::bind(&InterfaceService::AddFriend, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     _msgHandlerMap["getfriendlist"] = std::bind(&InterfaceService::GetFriendList, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+    _msgHandlerMap["creategroup"] = std::bind(&InterfaceService::CreateGroup, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+    _msgHandlerMap["addgroup"] = std::bind(&InterfaceService::AddGroup, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+    _msgHandlerMap["grouplist"] = std::bind(&InterfaceService::GroupList, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+    _msgHandlerMap["groupchat"] = std::bind(&InterfaceService::GetGroupUsers, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
 }   
 
 //获得消息对应的处理器
@@ -220,3 +224,159 @@ void InterfaceService::GetFriendList(const muduo::net::TcpConnectionPtr &conn, s
         LOG_ERROR << "Get friend list failed";
     }
 }
+
+// 处理创建群组业务
+void InterfaceService::CreateGroup(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)
+{
+    // 1. 构造rpc请求
+    Ye_GroupService::CreateGroupRequest create_request;
+    create_request.set_group_name("group1");
+    create_request.set_group_desc("group1 test");
+    create_request.set_userid(2);
+    // 2. 调用rpc服务
+    Ye_GroupService::CreateGroupResponse create_response;
+    Ye_GroupService::GroupServiceRpc_Stub group_stub(new MyRpcChannel());
+    MyRpcController controller;
+    group_stub.CreateGroup(&controller, &create_request, &create_response, nullptr);
+    if (controller.Failed())
+    {
+        LOG_ERROR << "create group rpc call failed: " << controller.ErrorText();
+        return;
+    }
+    // 3. 处理返回结果
+    if (create_response.success())
+    {
+        LOG_INFO << "Create group success";
+        LOG_INFO << "group id: " << create_response.group_id();
+    }
+    else
+    {
+        LOG_ERROR << "Create group failed: " << create_response.msg();
+    }
+
+}
+// 处理加入群组业务
+void InterfaceService::AddGroup(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)
+{
+    // 1. 构造rpc请求
+    Ye_GroupService::AddGroupRequest add_request;
+    add_request.set_userid(2);
+    add_request.set_group_id(1);
+    add_request.set_role("member");
+
+    // 2. 调用rpc服务
+    Ye_GroupService::AddGroupResponse add_response;
+    Ye_GroupService::GroupServiceRpc_Stub group_stub(new MyRpcChannel());
+    MyRpcController controller;
+    group_stub.AddGroup(&controller, &add_request, &add_response, nullptr);
+    if (controller.Failed())
+    {
+        LOG_ERROR << "add group rpc call failed: " << controller.ErrorText();
+        return;
+    }
+    // 3. 处理返回结果
+    if (add_response.success())
+    {
+        LOG_INFO << "Add group success";
+    }
+    else
+    {
+        LOG_ERROR << "Add group failed: " << add_response.msg();
+    }
+
+    // 4.序列化并发送响应给客户端
+    // string send_str = add_response.SerializeAsString();
+    // conn->send(send_str);
+}
+
+// 处理获取群组列表业务
+void InterfaceService::GroupList(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)
+{
+    // 1. 构造rpc请求
+    Ye_GroupService::GroupListRequest group_request;
+    group_request.set_userid(2);
+
+    // 2. 调用rpc服务
+    Ye_GroupService::GroupListResponse group_response;
+    Ye_GroupService::GroupServiceRpc_Stub group_stub(new MyRpcChannel());
+    MyRpcController controller;
+    group_stub.GroupList(&controller, &group_request, &group_response, nullptr);
+    if (controller.Failed())
+    {
+        LOG_ERROR << "group list rpc call failed: " << controller.ErrorText();
+        return;
+    }
+    // 3. 处理返回结果
+    if (group_response.groups_size() > 0)
+    {
+        LOG_INFO << "Get group list success";
+        for (int i = 0; i < group_response.groups_size(); ++i)
+        {
+            const Ye_GroupService::GroupInfo &group_info = group_response.groups(i);
+            LOG_INFO << "group id: " << group_info.group_id() << " group name: " << group_info.group_name() << " group desc: " << group_info.group_desc();
+            for (int j = 0; j < group_info.users_size(); ++j)
+            {
+                const Ye_GroupService::UserInfo &user_info = group_info.users(j);
+                LOG_INFO << "user id: " << user_info.id() << " user name: " << user_info.name() << " user state: " << user_info.state() << " user role: " << user_info.role();
+            }
+        }
+    }
+    else
+    {
+        LOG_ERROR << "Get group list failed";
+    }
+}
+// 处理获取群组用户id列表业务
+void InterfaceService::GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)
+{
+    // 1. 构造rpc请求
+    Ye_GroupService::GetGroupUsersRequest group_request;
+    group_request.set_group_id(1);
+    group_request.set_userid(2);
+
+    // 2. 调用rpc服务
+    Ye_GroupService::GetGroupUsersResponse group_response;
+    Ye_GroupService::GroupServiceRpc_Stub group_stub(new MyRpcChannel());
+    MyRpcController controller;
+    group_stub.GetGroupUsers(&controller, &group_request, &group_response, nullptr);
+    if (controller.Failed())
+    {
+        LOG_ERROR << "group users rpc call failed: " << controller.ErrorText();
+        return;
+    }
+    // 3. 处理返回结果
+    if (group_response.success())
+    {
+        LOG_INFO << "Get group users success";
+        lock_guard<mutex> lock(_connMutex);
+
+        for (int i = 0; i < group_response.users_size(); ++i)
+        {
+            const Ye_GroupService::UserId &user_info = group_response.users(i);
+            LOG_INFO << "user id: " << user_info.id();
+            auto it = _userConnMap.find(user_info.id());
+            if (it != _userConnMap.end())
+            {
+                // 3.1对方在线，直接转发消息
+                it->second->send(recv_buf);
+            }
+            else
+            {
+                // 3.2对方不在线，存储离线消息
+                _offlineMsg.OfflineMsgInsert(user_info.id(), recv_buf);
+            }
+        }
+    }
+    else
+    {
+        LOG_ERROR << "Get group users failed";
+    }
+}
+
+
+
+
+
+
+
+

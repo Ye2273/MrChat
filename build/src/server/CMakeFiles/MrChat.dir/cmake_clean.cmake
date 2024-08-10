@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o"
   "CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o"
   "CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o"
+  "CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o"
   "CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o"
   "CMakeFiles/MrChat.dir/user/UserService.cpp.o"
 )

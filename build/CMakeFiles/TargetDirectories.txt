@@ -10,3 +10,6 @@
 /home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir
 /home/ye/MrChat/build/src/server/FriendService/CMakeFiles/rebuild_cache.dir
 /home/ye/MrChat/build/src/server/FriendService/CMakeFiles/edit_cache.dir
+/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir
+/home/ye/MrChat/build/src/server/GroupService/CMakeFiles/rebuild_cache.dir
+/home/ye/MrChat/build/src/server/GroupService/CMakeFiles/edit_cache.dir

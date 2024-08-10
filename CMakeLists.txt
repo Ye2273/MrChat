@@ -18,6 +18,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include/server/proto)
 include_directories(${PROJECT_SOURCE_DIR}/include/server/AccountService)
 include_directories(${PROJECT_SOURCE_DIR}/include/server/offlinemsg)
 include_directories(${PROJECT_SOURCE_DIR}/include/server/FriendService)
+include_directories(${PROJECT_SOURCE_DIR}/include/server/GroupService)
 link_directories(/usr/lib64/mysql)
 
 # 加载子目录

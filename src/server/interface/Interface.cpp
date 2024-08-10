@@ -38,7 +38,7 @@ void Interface::onMessage(const muduo::net::TcpConnectionPtr& conn, muduo::net::
     std::string msg = buf->retrieveAllAsString();
     Ye_Interface::InterfaceRequest re;
     re.set_request_msg("hello");
-    re.set_type("Chat");
+    re.set_type("addfriend");
     std::string request_str = re.SerializeAsString();
     Ye_Interface::InterfaceRequest request;
     request.ParseFromString(request_str);

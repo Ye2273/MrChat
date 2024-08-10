@@ -10,7 +10,8 @@
 #include "myrpc/MyRpcChannel.h"
 #include "myrpc/MyRpcController.h"
 #include "FriendService.pb.h"
-using MsgHandler = std::function<void(const muduo::net::TcpConnectionPtr &conn, std::string &recv_str, muduo::Timestamp time)>;
+#include "GroupService.pb.h"
+using MsgHandler = std::function<void(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)>;
 
 class InterfaceService
 {
@@ -33,6 +34,16 @@ public:
     void AddFriend(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
     // 处理获取好友列表业务
     void GetFriendList(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
+
+    // 处理创建群组业务
+    void CreateGroup(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
+    // 处理加入群组业务
+    void AddGroup(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
+    // 处理获取群组列表业务
+    void GroupList(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
+    // 处理获取群组用户id列表业务
+    void GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
+
 
     //处理客户端异常退出
     void ClientCloseException(const muduo::net::TcpConnectionPtr &conn);
