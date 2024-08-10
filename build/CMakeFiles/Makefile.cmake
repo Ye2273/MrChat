@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
+  "../src/client/CMakeLists.txt"
   "../src/server/AccountService/CMakeLists.txt"
   "../src/server/CMakeLists.txt"
   "../src/server/FriendService/CMakeLists.txt"
@@ -51,6 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/server/AccountService/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/server/FriendService/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/server/GroupService/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/client/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -58,4 +60,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/server/CMakeFiles/MrChat.dir/DependInfo.cmake"
   "src/server/AccountService/CMakeFiles/account.dir/DependInfo.cmake"
   "src/server/FriendService/CMakeFiles/friend.dir/DependInfo.cmake"
+  "src/server/GroupService/CMakeFiles/group.dir/DependInfo.cmake"
+  "src/client/CMakeFiles/client.dir/DependInfo.cmake"
   )
