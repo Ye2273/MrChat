@@ -1,4 +1,3 @@
-#pragma once
 #include <mysql/mysql.h>
 #include <myrpc/MyRpcChannel.h>
 #include <google/protobuf/service.h>
@@ -18,16 +17,14 @@
 #include <semaphore.h>
 #include <atomic>
 #include "User.h"
-#include "GroupService.pb.h"
-#include "AccountService.pb.h"
 #include "Interface.pb.h"
-#include "FriendService.pb.h"
+#include "OfflineMsg.h"
 // 记录当前系统登录的用户信息
 User _currentUser;
 // 记录当前登录用户的好友列表信息
 std::vector<User> _currentUserFriendList;
 // 记录当前登录用户的群组列表信息
-std::vector<Ye_GroupService::GroupInfo&> _currentUserGroupList;
+std::vector<Ye_Interface::UnifiedMessage::GroupInfo> _currentUserGroupList;
 
 // 控制主菜单页面程序
 bool ChatPageFlag = false;
@@ -44,9 +41,16 @@ void recvThread(int);
 // 获取系统时间（聊天信息需要添加时间信息）
 std::string getCurrentTime();
 // 主聊天页面程序
-void chatPage(int);
+void ChatPage(int);
 // 显示当前登录成功用户的基本信息
 void showUserInfo();
+// 显示好友列表
+void showFriendList();
+// 显示群组列表
+void showGroupList();
+// 登录成功后的处理
+void DoLoginResponse(const Ye_Interface::UnifiedMessage&);
+
 
 
 // 聊天客户端程序实现，main线程用作发送线程，子线程用作接收线程
@@ -98,8 +102,17 @@ int main(int argc, char* argv[]) {
         std::cout << "Please Select: ";
         int select = 0;
         std::cin >> select;
-        // 清空缓冲区
-        std::cin.get();
+
+        // 检查 std::cin 是否进入错误状态。这通常会发生在输入的类型不匹配时，比如输入了非整数值。
+        if (std::cin.fail()) {
+            std::cin.clear(); // 清除 std::cin 的错误标志，使其可以继续接收输入
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // 丢弃输入流中剩余的字符直到换行符，以清空缓冲区中的多余数据。
+            std::cout << "Input Error, Please Input Again!" << std::endl;
+            continue;
+        }
+
+        // 在读取 select 后调用 std::cin.ignore() 来清空缓冲区中的多余字符（如换行符），以准备接下来的输入操作。
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (select)
         {
@@ -114,10 +127,10 @@ int main(int argc, char* argv[]) {
                 std::cout << "Please Input Your Password: ";
                 std::cin.getline(pwd, 50);
                 // 封装登录请求
-                Ye_AccountService::LoginRequest request;
+                Ye_Interface::UnifiedMessage request;
                 request.set_id(id);
                 request.set_password(pwd);
-                request.set_msg("Login");
+                request.set_type("Login");
                 std::string requestStr;
                 request.SerializeToString(&requestStr);
 
@@ -134,7 +147,7 @@ int main(int argc, char* argv[]) {
                     // 登录成功
                     ChatPageFlag = true;
                     // 进入聊天页面
-                    chatPage(clientfd);
+                    ChatPage(clientfd);
                 } else {
                     std::cout << "Login Failed, Please Check Your ID and Password!" << std::endl;
                 }
@@ -150,10 +163,10 @@ int main(int argc, char* argv[]) {
                 std::cout << "Please Input Your Password: ";
                 std::cin.getline(pwd, 50);
                 // 封装注册请求
-                Ye_AccountService::RegisterRequest request;
+                Ye_Interface::UnifiedMessage request;
                 request.set_name(name);
                 request.set_password(pwd);
-                request.set_msg("Register");
+                request.set_type("Register");
                 std::string requestStr;
                 request.SerializeToString(&requestStr);
                 // 发送注册请求
@@ -198,54 +211,62 @@ void recvThread(int clientfd) {
 
         // 注意：需要根据实际协议处理数据长度和拼接
         std::string data(buffer, ret); // 使用接收到的数据创建一个 string 对象
-
-        // 定义不同的消息类型, 用于接收数据
-        Ye_AccountService::LoginResponse login_response;
-        Ye_AccountService::RegisterResponse register_response;
-        Ye_AccountService::LogoutResponse logout_response;
-        Ye_Interface::ChatMsg chat_msg;
-        Ye_Interface::GroupMsg group_msg;
-        Ye_GroupService::GroupListResponse group_list_response;
-        Ye_GroupService::CreateGroupResponse create_group_response;
-        Ye_GroupService::AddGroupResponse add_group_response;
-        
-        Ye_GroupService::UserInfo user_info;
-        Ye_FriendService::AddFriendResponse add_friend_response;
-        Ye_FriendService::FriendListResponse friend_list_response;
-
-
+        Ye_Interface::UnifiedMessage response;
+        response.ParseFromString(data);
         // 处理不同的消息类型
-        if (login_response.ParseFromString(data)) {
-            DoLoginResponse(login_response);
-        } else if (register_response.ParseFromString(data)) {
-            if (register_response.is_success()) {
-                std::cout << "Register Success! Your ID is: " << register_response.id() << std::endl;
+        if (response.type() == "Login") {
+            DoLoginResponse(response);
+        } else if (response.type() == "Register") {
+            if (response.is_success()) {
+                std::cout << "Register Success! Your ID is: " << response.id() << std::endl;
             } else {
-                std::cout << "Register Failed: " << register_response.msg() << std::endl;
+                std::cout << "Register Failed: " << response.msg() << std::endl;
             }
             isRegister = true;
             sem_post(&RWsem);
-        } else if (logout_response.ParseFromString(data)) {
-            if (logout_response.is_success()) {
-                std::cout << "Logout Success!" << std::endl;
+        } else if (response.type() == "AddFriend") {
+            if (response.is_success()) {
+                std::cout << "Add Friend Success!" << std::endl;
             } else {
-                std::cout << "Logout Failed: " << logout_response.msg() << std::endl;
+                std::cout << "Add Friend Failed: " << response.msg() << std::endl;
             }
-        } else if (group_list_response.ParseFromString(data)) {
-            // 接收群组列表信息
-            _currentUserGroupList.clear();
-            for(int i = 0; i < group_list_response.groups_size(); i++) {
-                Ye_GroupService::GroupInfo group_info = group_list_response.groups(i);
-                _currentUserGroupList.push_back(group_info);
+        } else if (response.type() == "GetFriendList") {
+            // 接收好友列表信息
+            _currentUserFriendList.clear();
+            for(int i = 0; i < response.friends_info_size(); i++) {
+                Ye_Interface::UnifiedMessage::FriendInfo friend_info = response.friends_info(i);
+                User user;
+                user.SetId(friend_info.id());
+                user.SetName(friend_info.name());
+                user.SetState(friend_info.state());
+                _currentUserFriendList.push_back(user);
             }
-            // 昨天在这里            ！！！！！！！！！！！！
-
-
-        } else if (chat_msg.ParseFromString(data)) {
+            showFriendList();
+        } else if (response.type() == "CreateGroup") {
+            if (response.is_success()) {
+                std::cout << "Create Group Success! Group ID: " << response.group_id() << std::endl;
+            } else {
+                std::cout << "Create Group Failed: " << response.msg() << std::endl;
+            }
+        } else if (response.type() == "AddGroup") {
+            if (response.is_success()) {
+                std::cout << "Add Group Success!" << std::endl;
+            } else {
+                std::cout << "Add Group Failed: " << response.msg() << std::endl;
+            }
+        } else if (response.type() == "GroupChat") {
             std::cout << "========================" << std::endl;
-            std::cout << "From: " << chat_msg.from_user_id() << " " << chat_msg.user_name() << std::endl;
-            std::cout << "Time: " << chat_msg.time() << std::endl;
-            std::cout << "Content: " << chat_msg.msg() << std::endl;
+            std::cout << "From: " << response.from_user_id() << " " << response.user_name() << std::endl;
+            std::cout << "Group ID: " << response.group_id() << std::endl;
+            std::cout << "Time: " << response.time() << std::endl;
+            std::cout << "Content: " << response.msg() << std::endl;
+            std::cout << "========================" << std::endl;
+        } else if (response.type() == "Chat") {
+            std::cout << "========================" << std::endl;
+            std::cout << "From: " << response.from_user_id() << std::endl;
+            std::cout << "To: " << response.to_user_id() << std::endl;
+            std::cout << "Time: " << response.time() << std::endl;
+            std::cout << "Content: " << response.msg() << std::endl;
             std::cout << "========================" << std::endl;
         } else {
             std::cerr << "Unknown message format" << std::endl;
@@ -254,7 +275,7 @@ void recvThread(int clientfd) {
 }
 
 // 登录成功后的处理
-void DoLoginResponse(const Ye_AccountService::LoginResponse& login_response) {
+void DoLoginResponse(const Ye_Interface::UnifiedMessage& login_response) {
     if(login_response.is_success() == true) {
         // 登录成功
         std::cout << "Login Success!" << std::endl;
@@ -263,14 +284,56 @@ void DoLoginResponse(const Ye_AccountService::LoginResponse& login_response) {
         _currentUser.SetName(login_response.name());
         
         std::cout << "======================login user======================" << std::endl;
-        std::cout << "current login user => id:" << login_response.id() << " name:" << login_response.name() << std::endl;
+        std::cout << "login user => id:" << login_response.id() << " name:" << login_response.name() << std::endl;
+        // 打印离线消息
+        OfflineMsg offlineMsg;
+        std::vector<std::string> msgs = offlineMsg.OfflineMsgQuery(login_response.id());
+        for(auto& msg : msgs) {
+            Ye_Interface::UnifiedMessage offline_msg;
+            offline_msg.ParseFromString(msg);
+            if(offline_msg.type() == "Chat") {
+                std::cout << "========================" << std::endl;
+                std::cout << "From: " << "ID: " << offline_msg.from_user_id() << "  Name: " << offline_msg.user_name() << std::endl;
+                std::cout << "Time: " << offline_msg.time() << std::endl;
+                std::cout << "Content: " << offline_msg.msg() << std::endl;
+                std::cout << "========================" << std::endl;
+            } else if(offline_msg.type() == "GroupChat") {
+                std::cout << "========================" << std::endl;
+                std::cout << "From: " << "ID: " << offline_msg.from_user_id() << "  Name: " << offline_msg.user_name() << std::endl;
+                std::cout << "Group ID: " << offline_msg.group_id() << std::endl;
+                std::cout << "Time: " << offline_msg.time() << std::endl;
+                std::cout << "Content: " << offline_msg.msg() << std::endl;
+                std::cout << "========================" << std::endl;
+            }
+        }
+        offlineMsg.OfflineMsgRemove(login_response.id());
         isLogin = true;
-        sem_post(&RWsem);
     } else {
-        std::cout << "Login Failed: " << login_response.msg() << std::endl;
+        isLogin = false;
     }
+    sem_post(&RWsem);
 }
 
+// show group list
+void showGroupList() {
+    std::cout << "======================== Group List ========================" << std::endl;
+    for(int i = 0; i < _currentUserGroupList.size(); i++) {
+        std::cout << _currentUserGroupList[i].group_id() << " " << _currentUserGroupList[i].group_name() << _currentUserGroupList[i].group_desc() << std::endl;
+         std::cout << "| User ID" << " |  User Name" << " |  User State" << " |  User Role" << std::endl;
+        for(int j = 0; j < _currentUserGroupList[i].users_size(); j++) {
+            std::cout << "| " << _currentUserGroupList[i].users(j).id() << " | " << _currentUserGroupList[i].users(j).name() << " | " << _currentUserGroupList[i].users(j).state() << " | " << _currentUserGroupList[i].users(j).role() << std::endl;
+        }
+    }
+    std::cout << "======================== end ========================" << std::endl;
+}
+// show friend list
+void showFriendList() {
+    std::cout << "======================== Friend List ========================" << std::endl;
+    for(int i = 0; i < _currentUserFriendList.size(); i++) {
+        std::cout << "ID: " << _currentUserFriendList[i].GetId() << " Name: " << _currentUserFriendList[i].GetName() << " State: " << _currentUserFriendList[i].GetState() << std::endl;
+    }
+    std::cout << "======================== end ========================" << std::endl;
+}
 
 // "help" command handler
 void help(int fd = 0, std::string str = "");
@@ -285,19 +348,27 @@ void addgroup(int, std::string);
 // "groupchat" command handler
 void groupchat(int, std::string);
 // "loginout" command handler
-void loginout(int, std::string);
+void logout(int, std::string);
+
+void getfriendlist(int, std::string);
+void getgrouplist(int, std::string);
 
 // 系统支持的客户端命令列表
 std::unordered_map<std::string, std::string> commandMap = {
-    {"help", "显示所有支持的命令，格式help"},
-    {"chat", "一对一聊天，格式chat:friendid:message"},
-    {"addfriend", "添加好友，格式addfriend:friendid"},
-    {"creategroup", "创建群组，格式creategroup:groupname:groupdesc"},
-    {"addgroup", "加入群组，格式addgroup:groupid"},
-    {"groupchat", "群聊，格式groupchat:groupid:message"},
-    {"loginout", "注销，格式loginout"}};
+    {"======================","=========================="},
+    {"help", "  显示所有可以使用的命令 格式-- help"},
+    {"chat", "  一对一聊天  格式-- chat:friendid:message"},
+    {"addfriend", " 添加好友    格式-- addfriend:friendid"},
+    {"creategroup", "   创建群组    格式-- creategroup:groupname:groupdesc"},
+    {"addgroup", "  加入群组    格式-- addgroup:groupid"},
+    {"groupchat", " 群聊        格式-- groupchat:groupid:message"},
+    {"logout", "  注销        格式-- logout"},
+    {"getfriendlist", " 获取好友列表  格式-- getfriendlist"},
+    {"getgrouplist", " 获取群组列表  格式-- getgrouplist"},
+    {"======================","=========================="}
+};
 
-// 注册系统支持的客户端命令处理
+// 注册系统支持的客户端命令处理函数,(int, std::string)分别表示clientfd和命令参数
 std::unordered_map<std::string, std::function<void(int, std::string)>> commandHandlerMap = {
     {"help", help},
     {"chat", chat},
@@ -305,7 +376,9 @@ std::unordered_map<std::string, std::function<void(int, std::string)>> commandHa
     {"creategroup", creategroup},
     {"addgroup", addgroup},
     {"groupchat", groupchat},
-    {"loginout", loginout}
+    {"logout", logout},
+    {"getfriendlist", getfriendlist},
+    {"getgrouplist", getgrouplist}
 };
 
 
@@ -336,7 +409,6 @@ void ChatPage(int clientfd) {
     }
 }
 
-
 // "help" command handler
 void help(int, std::string)
 {
@@ -353,11 +425,11 @@ void addfriend(int clientfd, std::string str)
 {
     int friendid = atoi(str.c_str());
 
-    Ye_FriendService::AddFriendRequest request;
-    request.set_myid(_currentUser.GetId());
+    Ye_Interface::UnifiedMessage request;
+    request.set_id(_currentUser.GetId());
     request.set_friendid(friendid);
-    // request.set_msg("AddFriend");
-    std::string requestStr;
+    request.set_type("AddFriend");
+    std::string requestStr = request.SerializeAsString();
 
     int len = send(clientfd, requestStr.c_str(), strlen(requestStr.c_str()) + 1, 0);
     if (-1 == len)
@@ -378,12 +450,14 @@ void chat(int clientfd, std::string str)
     int friendid = atoi(str.substr(0, idx).c_str());
     std::string message = str.substr(idx + 1, str.size() - idx);
 
-    Ye_Interface::ChatMsg chat_msg;
+    Ye_Interface::UnifiedMessage chat_msg;
     chat_msg.set_from_user_id(_currentUser.GetId());
+    chat_msg.set_user_name(_currentUser.GetName());
     chat_msg.set_to_user_id(friendid);
     chat_msg.set_msg(message);
     chat_msg.set_time(getCurrentTime());
-    std::string buffer;
+    chat_msg.set_type("Chat");
+    std::string buffer = chat_msg.SerializeAsString();
 
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
@@ -404,11 +478,12 @@ void creategroup(int clientfd, std::string str)
     std::string groupname = str.substr(0, idx);
     std::string groupdesc = str.substr(idx + 1, str.size() - idx);
 
-    Ye_GroupService::CreateGroupRequest request;
-    request.set_userid(_currentUser.GetId());
+    Ye_Interface::UnifiedMessage request;
+    request.set_id(_currentUser.GetId());
     request.set_group_name(groupname);
     request.set_group_desc(groupdesc);
-    std::string buffer;
+    request.set_type("CreateGroup");
+    std::string buffer = request.SerializeAsString();
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
     {
@@ -420,10 +495,11 @@ void addgroup(int clientfd, std::string str)
 {
     int groupid = atoi(str.c_str());
 
-    Ye_GroupService::AddGroupRequest request;
-    request.set_userid(_currentUser.GetId());
+    Ye_Interface::UnifiedMessage request;
+    request.set_id(_currentUser.GetId());
     request.set_group_id(groupid);
-    std::string buffer;
+    request.set_type("AddGroup");
+    std::string buffer = request.SerializeAsString();
 
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
@@ -444,13 +520,14 @@ void groupchat(int clientfd, std::string str)
     int groupid = atoi(str.substr(0, idx).c_str());
     std::string message = str.substr(idx + 1, str.size() - idx);
 
-    Ye_Interface::GroupMsg group_msg;
+    Ye_Interface::UnifiedMessage group_msg;
     group_msg.set_from_user_id(_currentUser.GetId());
     group_msg.set_user_name(_currentUser.GetName());
     group_msg.set_group_id(groupid);
     group_msg.set_msg(message);
     group_msg.set_time(getCurrentTime());
-    std::string buffer;
+    group_msg.set_type("GroupChat");
+    std::string buffer = group_msg.SerializeAsString();
 
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
@@ -459,21 +536,48 @@ void groupchat(int clientfd, std::string str)
     }
 }
 // "loginout" command handler
-void loginout(int clientfd, std::string)
+void logout(int clientfd, std::string)
 {
-    Ye_AccountService::LogoutRequest request;
+    Ye_Interface::UnifiedMessage request;
     request.set_id(_currentUser.GetId());
-    std::string buffer;
+    request.set_type("Logout");
+    std::string buffer = request.SerializeAsString();
 
     int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
     if (-1 == len)
     {
-        std::cerr << "send loginout msg error -> " << buffer << std::endl;
+        std::cerr << "send logout msg error -> " << buffer << std::endl;
     }
     else
     {
         ChatPageFlag = false;
     }   
+}
+
+void getfriendlist(int clientfd, std::string)
+{
+    Ye_Interface::UnifiedMessage request;
+    request.set_id(_currentUser.GetId());
+    request.set_type("GetFriendList");
+    std::string buffer = request.SerializeAsString();
+    int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+    if (-1 == len)
+    {
+        std::cerr << "send getfriendlist msg error -> " << buffer << std::endl;
+    }
+}
+
+void getgrouplist(int clientfd, std::string)
+{
+    Ye_Interface::UnifiedMessage request;
+    request.set_id(_currentUser.GetId());
+    request.set_type("GetGroupList");
+    std::string buffer = request.SerializeAsString();
+    int len = send(clientfd, buffer.c_str(), strlen(buffer.c_str()) + 1, 0);
+    if (-1 == len)
+    {
+        std::cerr << "send getgrouplist msg error -> " << buffer << std::endl;
+    }
 }
 
 // 获取系统时间（聊天信息需要添加时间信息）

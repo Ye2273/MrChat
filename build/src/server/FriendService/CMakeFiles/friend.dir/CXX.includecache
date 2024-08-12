@@ -6,3 +6,15 @@
 
 #IncludeRegexTransform: 
 
+../include/server/db/MySQL.h
+mysql/mysql.h
+-
+string
+-
+
+/home/ye/MrChat/src/server/db/MySQL.cpp
+MySQL.h
+/home/ye/MrChat/src/server/db/MySQL.h
+muduo/base/Logging.h
+-
+

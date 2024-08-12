@@ -54,17 +54,17 @@ void AccountService::Login(::google::protobuf::RpcController *controller,
             user.SetState("online");
             _userService.UpdateState(user);
 
-            // 查询离线消息
-            std::vector<std::string> offlineMsg = _offlineMsg.OfflineMsgQuery(id);
-            if(!offlineMsg.empty())
-            {
-                for(auto &msg : offlineMsg)
-                {
-                    response->add_offline_msg(msg);
-                }
-                // 删除离线消息
-                _offlineMsg.OfflineMsgRemove(id);
-            }
+            // // 查询离线消息
+            // std::vector<std::string> offlineMsg = _offlineMsg.OfflineMsgQuery(id);
+            // if(!offlineMsg.empty())
+            // {
+            //     for(auto &msg : offlineMsg)
+            //     {
+            //         response->add_offline_msg(msg);
+            //     }
+            //     // 删除离线消息
+            //     _offlineMsg.OfflineMsgRemove(id);
+            // }
         }
     }
     else if(user.GetId() == id && user.GetPwd() != password)

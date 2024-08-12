@@ -23,6 +23,7 @@ src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o
  ../include/server/proto/AccountService.pb.h
  ../include/server/proto/FriendService.pb.h
  ../include/server/proto/GroupService.pb.h
+ ../include/server/proto/Interface.pb.h
  ../include/server/user/User.h
  ../include/server/user/UserService.h
  /home/ye/MrChat/src/server/interface/InterfaceService.cpp
@@ -40,6 +41,7 @@ src/server/CMakeFiles/MrChat.dir/interface/main.cpp.o
 src/server/CMakeFiles/MrChat.dir/offlinemsg/OfflineMsg.cpp.o
  ../include/server/db/MySQL.h
  ../include/server/offlinemsg/OfflineMsg.h
+ ../include/server/proto/Interface.pb.h
  /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
 src/server/CMakeFiles/MrChat.dir/proto/AccountService.pb.cc.o
  ../include/server/proto/AccountService.pb.h

@@ -63,14 +63,14 @@ void FriendService::GetFriendList(::google::protobuf::RpcController *controller,
             }
             mysql_free_result(res);
             response->set_is_success(true);
-            // 3. 返回响应
-            done->Run();
+
         }
     }
     else
     {
         response->set_is_success(false);
         response->set_msg("FriendService -- GetFriendList service connect mysql failed");
-        done->Run();
     }
+    // 3. 返回响应  
+    done->Run();
 }

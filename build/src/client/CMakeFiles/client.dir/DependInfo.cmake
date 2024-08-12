@@ -5,6 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ye/MrChat/src/client/Cient.cpp" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/Cient.cpp.o"
+  "/home/ye/MrChat/src/server/db/MySQL.cpp" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.o"
+  "/home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o"
+  "/home/ye/MrChat/src/server/proto/AccountService.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o"
+  "/home/ye/MrChat/src/server/proto/FriendService.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o"
+  "/home/ye/MrChat/src/server/proto/GroupService.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o"
+  "/home/ye/MrChat/src/server/proto/Interface.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

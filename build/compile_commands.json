@@ -133,5 +133,35 @@
   "directory": "/home/ye/MrChat/build/src/client",
   "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/Cient.cpp.o -c /home/ye/MrChat/src/client/Cient.cpp",
   "file": "/home/ye/MrChat/src/client/Cient.cpp"
+},
+{
+  "directory": "/home/ye/MrChat/build/src/client",
+  "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o -c /home/ye/MrChat/src/server/proto/AccountService.pb.cc",
+  "file": "/home/ye/MrChat/src/server/proto/AccountService.pb.cc"
+},
+{
+  "directory": "/home/ye/MrChat/build/src/client",
+  "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o -c /home/ye/MrChat/src/server/proto/FriendService.pb.cc",
+  "file": "/home/ye/MrChat/src/server/proto/FriendService.pb.cc"
+},
+{
+  "directory": "/home/ye/MrChat/build/src/client",
+  "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o -c /home/ye/MrChat/src/server/proto/GroupService.pb.cc",
+  "file": "/home/ye/MrChat/src/server/proto/GroupService.pb.cc"
+},
+{
+  "directory": "/home/ye/MrChat/build/src/client",
+  "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o -c /home/ye/MrChat/src/server/proto/Interface.pb.cc",
+  "file": "/home/ye/MrChat/src/server/proto/Interface.pb.cc"
+},
+{
+  "directory": "/home/ye/MrChat/build/src/client",
+  "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o -c /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp",
+  "file": "/home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp"
+},
+{
+  "directory": "/home/ye/MrChat/build/src/client",
+  "command": "/usr/bin/c++   -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService  -g -g   -o CMakeFiles/client.dir/__/server/db/MySQL.cpp.o -c /home/ye/MrChat/src/server/db/MySQL.cpp",
+  "file": "/home/ye/MrChat/src/server/db/MySQL.cpp"
 }
 ]

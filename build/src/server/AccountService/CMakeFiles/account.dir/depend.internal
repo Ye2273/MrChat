@@ -15,6 +15,7 @@ src/server/AccountService/CMakeFiles/account.dir/__/db/MySQL.cpp.o
 src/server/AccountService/CMakeFiles/account.dir/__/offlinemsg/OfflineMsg.cpp.o
  ../include/server/db/MySQL.h
  ../include/server/offlinemsg/OfflineMsg.h
+ ../include/server/proto/Interface.pb.h
  /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
 src/server/AccountService/CMakeFiles/account.dir/__/proto/AccountService.pb.cc.o
  ../include/server/proto/AccountService.pb.h

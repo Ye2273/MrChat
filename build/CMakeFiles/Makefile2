@@ -247,7 +247,7 @@ src/server/AccountService/CMakeFiles/account.dir/clean:
 src/server/FriendService/CMakeFiles/friend.dir/all:
 	$(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/depend
 	$(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=21,22,23,24,25,26 "Built target friend"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=27,28,29,30,31,32 "Built target friend"
 .PHONY : src/server/FriendService/CMakeFiles/friend.dir/all
 
 # Build rule for subdir invocation for target.
@@ -274,7 +274,7 @@ src/server/FriendService/CMakeFiles/friend.dir/clean:
 src/server/GroupService/CMakeFiles/group.dir/all:
 	$(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/depend
 	$(MAKE) -f src/server/GroupService/CMakeFiles/group.dir/build.make src/server/GroupService/CMakeFiles/group.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=27,28,29,30,31,32 "Built target group"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=33,34,35,36,37,38 "Built target group"
 .PHONY : src/server/GroupService/CMakeFiles/group.dir/all
 
 # Build rule for subdir invocation for target.
@@ -301,12 +301,12 @@ src/server/GroupService/CMakeFiles/group.dir/clean:
 src/client/CMakeFiles/client.dir/all:
 	$(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/depend
 	$(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=19,20 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=19,20,21,22,23,24,25,26 "Built target client"
 .PHONY : src/client/CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 src/client/CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 src/client/CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ye/MrChat/build/CMakeFiles 0
 .PHONY : src/client/CMakeFiles/client.dir/rule
