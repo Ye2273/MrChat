@@ -51,8 +51,11 @@ FriendService.pb.h
 ../include/server/interface/FriendService.pb.h
 GroupService.pb.h
 ../include/server/interface/GroupService.pb.h
+<<<<<<< HEAD
 Redis.h
 ../include/server/interface/Redis.h
+=======
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26
 
 ../include/server/offlinemsg/OfflineMsg.h
 string
@@ -134,6 +137,7 @@ google/protobuf/repeated_field.h
 google/protobuf/extension_set.h
 -
 google/protobuf/service.h
+<<<<<<< HEAD
 -
 google/protobuf/unknown_field_set.h
 -
@@ -145,6 +149,19 @@ google/protobuf/port_undef.inc
 ../include/server/proto/GroupService.pb.h
 limits
 -
+=======
+-
+google/protobuf/unknown_field_set.h
+-
+google/protobuf/port_def.inc
+-
+google/protobuf/port_undef.inc
+-
+
+../include/server/proto/GroupService.pb.h
+limits
+-
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26
 string
 -
 google/protobuf/port_def.inc
@@ -182,6 +199,7 @@ google/protobuf/port_def.inc
 google/protobuf/port_undef.inc
 -
 
+<<<<<<< HEAD
 ../include/server/redis/Redis.h
 hiredis/hiredis.h
 -
@@ -192,6 +210,8 @@ functional
 iostream
 -
 
+=======
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26
 ../include/server/user/User.h
 string
 -

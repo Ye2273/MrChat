@@ -229,6 +229,7 @@ EndOfStreamException: Unable to read additional data from client sessionid 0x191
 2024-08-12 13:15:24,001 [myid:] - INFO  [SessionTracker:ZooKeeperServer@358] - Expiring session 0x19144824afb000f, timeout of 30000ms exceeded
 2024-08-12 13:15:24,001 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@486] - Processed session termination for sessionid: 0x19144824afb0010
 2024-08-12 13:15:24,001 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@486] - Processed session termination for sessionid: 0x19144824afb000f
+<<<<<<< HEAD
 2024-08-12 18:38:52,682 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@192] - Accepted socket connection from /127.0.0.1:46036
 2024-08-12 18:38:52,708 [myid:] - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@896] - Connection request from old client /127.0.0.1:46036; will be dropped if server is in r-o mode
 2024-08-12 18:38:52,709 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@942] - Client attempting to establish new session at /127.0.0.1:46036
@@ -289,3 +290,5 @@ EndOfStreamException: Unable to read additional data from client sessionid 0x191
 2024-08-12 18:59:20,010 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@486] - Processed session termination for sessionid: 0x19144824afb0015
 2024-08-12 18:59:24,007 [myid:] - INFO  [SessionTracker:ZooKeeperServer@358] - Expiring session 0x19144824afb0013, timeout of 30000ms exceeded
 2024-08-12 18:59:24,007 [myid:] - INFO  [ProcessThread(sid:0 cport:2181)::PrepRequestProcessor@486] - Processed session termination for sessionid: 0x19144824afb0013
+=======
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26

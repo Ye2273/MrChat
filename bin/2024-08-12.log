@@ -84,6 +84,7 @@
 [2024-08-12 13:14:42]=>(INFO) zookeeper start success
 [2024-08-12 13:14:42]=>(INFO) send response success!
 [2024-08-12 13:14:42]=>(INFO) client disconnected!
+<<<<<<< HEAD
 [2024-08-12 18:38:52]=>(INFO) zookeeper connected
 [2024-08-12 18:38:52]=>(INFO) zookeeper start success
 [2024-08-12 18:38:52]=>(INFO) node exist
@@ -108,3 +109,5 @@
 [2024-08-12 18:58:09]=>(INFO) zookeeper start success
 [2024-08-12 18:58:09]=>(INFO) send response success!
 [2024-08-12 18:58:09]=>(INFO) client disconnected!
+=======
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26

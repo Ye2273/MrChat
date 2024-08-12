@@ -12,6 +12,7 @@ mysql/mysql.h
 string
 -
 
+<<<<<<< HEAD
 ../include/server/offlinemsg/OfflineMsg.h
 string
 -
@@ -77,4 +78,11 @@ Interface.pb.h
 /home/ye/MrChat/src/server/redis/Redis.cpp
 Redis.h
 /home/ye/MrChat/src/server/redis/Redis.h
+=======
+/home/ye/MrChat/src/server/db/MySQL.cpp
+MySQL.h
+/home/ye/MrChat/src/server/db/MySQL.h
+muduo/base/Logging.h
+-
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26
 

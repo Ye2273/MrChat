@@ -25,7 +25,10 @@ src/server/CMakeFiles/MrChat.dir/interface/InterfaceService.cpp.o
  ../include/server/proto/FriendService.pb.h
  ../include/server/proto/GroupService.pb.h
  ../include/server/proto/Interface.pb.h
+<<<<<<< HEAD
  ../include/server/redis/Redis.h
+=======
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26
  ../include/server/user/User.h
  ../include/server/user/UserService.h
  /home/ye/MrChat/src/server/interface/InterfaceService.cpp

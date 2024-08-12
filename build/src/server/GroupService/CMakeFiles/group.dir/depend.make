@@ -6,6 +6,7 @@ src/server/GroupService/CMakeFiles/group.dir/GroupService.cpp.o: ../src/server/G
 src/server/GroupService/CMakeFiles/group.dir/__/db/MySQL.cpp.o: ../include/server/db/MySQL.h
 src/server/GroupService/CMakeFiles/group.dir/__/db/MySQL.cpp.o: ../src/server/db/MySQL.cpp
 
+<<<<<<< HEAD
 src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o: ../include/server/db/MySQL.h
 src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
 src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o: ../include/server/proto/Interface.pb.h
@@ -17,6 +18,11 @@ src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o: ../s
 src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o: ../include/server/redis/Redis.h
 src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o: ../src/server/redis/Redis.cpp
 
+=======
+src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o: ../include/server/proto/GroupService.pb.h
+src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o: ../src/server/proto/GroupService.pb.cc
+
+>>>>>>> 283f4f48500cb8b68c8d5ff6cca2de7c4ed08f26
 src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.o: ../include/server/db/MySQL.h
 src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.o: ../include/server/user/User.h
 src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.o: ../include/server/user/UserService.h
