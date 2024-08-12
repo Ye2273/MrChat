@@ -36,17 +36,9 @@ void Interface::onConnection(const muduo::net::TcpConnectionPtr& conn)
 void Interface::onMessage(const muduo::net::TcpConnectionPtr& conn, muduo::net::Buffer* buf, muduo::Timestamp time)
 {
     std::string msg = buf->retrieveAllAsString();
-    Ye_Interface::InterfaceRequest re;
-    re.set_request_msg("hello");
-    re.set_type("addfriend");
-    std::string request_str = re.SerializeAsString();
-    Ye_Interface::InterfaceRequest request;
-    request.ParseFromString(request_str);
-
-    auto msg_handler = InterfaceService::GetInstance().GetHandler(request.type());
-
-    std::string recv_str = request.request_msg();
-    // std::cout << "recv_str: " << recv_str << std::endl;
-    msg_handler(conn, recv_str, time);
-    
+    Ye_Interface::UnifiedMessage request;
+    request.ParseFromString(msg);
+    std::string msg_type = request.type();
+    auto msg_handler = InterfaceService::GetInstance().GetHandler(msg_type);
+    msg_handler(conn, msg, time);
 }

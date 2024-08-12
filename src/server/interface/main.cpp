@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     signal(SIGINT, ResetHandler);
 
     muduo::net::EventLoop loop;
-    muduo::net::InetAddress addr("127.0.0.1", 8000);
+    muduo::net::InetAddress addr("127.0.0.1", 6000);
     Interface server(&loop, addr, "Interface");
 
     server.start();

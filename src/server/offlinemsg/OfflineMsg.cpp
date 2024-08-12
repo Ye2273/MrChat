@@ -1,8 +1,9 @@
 #include "OfflineMsg.h"
-
+#include "Interface.pb.h"
 // 存储用户的离线消息
 void OfflineMsg::OfflineMsgInsert(int userid, std::string msg)
 {
+    
     // 1.组装sql语句
     char sql[1024] = {0};
     sprintf(sql, "insert into offlinemessage values(%d, '%s')", userid, msg.c_str());
@@ -11,6 +12,10 @@ void OfflineMsg::OfflineMsgInsert(int userid, std::string msg)
     if (mysql.Connect())
     {
         mysql.Update(sql);
+    }
+    else
+    {
+        std::cout << "OfflineMsgInsert mysql connect failed" << std::endl;
     }
 }
 

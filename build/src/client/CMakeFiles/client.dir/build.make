@@ -70,17 +70,107 @@ src/client/CMakeFiles/client.dir/Cient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/Cient.cpp.s"
 	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/client/Cient.cpp -o CMakeFiles/client.dir/Cient.cpp.s
 
+src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o: src/client/CMakeFiles/client.dir/flags.make
+src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o: ../src/server/proto/AccountService.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o -c /home/ye/MrChat/src/server/proto/AccountService.pb.cc
+
+src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.i"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/proto/AccountService.pb.cc > CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.i
+
+src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.s"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/proto/AccountService.pb.cc -o CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.s
+
+src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o: src/client/CMakeFiles/client.dir/flags.make
+src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o: ../src/server/proto/FriendService.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o -c /home/ye/MrChat/src/server/proto/FriendService.pb.cc
+
+src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.i"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/proto/FriendService.pb.cc > CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.i
+
+src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.s"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/proto/FriendService.pb.cc -o CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.s
+
+src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o: src/client/CMakeFiles/client.dir/flags.make
+src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o: ../src/server/proto/GroupService.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o -c /home/ye/MrChat/src/server/proto/GroupService.pb.cc
+
+src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.i"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/proto/GroupService.pb.cc > CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.i
+
+src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.s"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/proto/GroupService.pb.cc -o CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.s
+
+src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o: src/client/CMakeFiles/client.dir/flags.make
+src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o: ../src/server/proto/Interface.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o -c /home/ye/MrChat/src/server/proto/Interface.pb.cc
+
+src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.i"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/proto/Interface.pb.cc > CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.i
+
+src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.s"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/proto/Interface.pb.cc -o CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.s
+
+src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o: src/client/CMakeFiles/client.dir/flags.make
+src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o: ../src/server/offlinemsg/OfflineMsg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o -c /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
+
+src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.i"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp > CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.i
+
+src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.s"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp -o CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.s
+
+src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.o: src/client/CMakeFiles/client.dir/flags.make
+src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.o: ../src/server/db/MySQL.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.o"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/__/server/db/MySQL.cpp.o -c /home/ye/MrChat/src/server/db/MySQL.cpp
+
+src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/__/server/db/MySQL.cpp.i"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/db/MySQL.cpp > CMakeFiles/client.dir/__/server/db/MySQL.cpp.i
+
+src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/__/server/db/MySQL.cpp.s"
+	cd /home/ye/MrChat/build/src/client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/db/MySQL.cpp -o CMakeFiles/client.dir/__/server/db/MySQL.cpp.s
+
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/Cient.cpp.o"
+"CMakeFiles/client.dir/Cient.cpp.o" \
+"CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o" \
+"CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o" \
+"CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o" \
+"CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o" \
+"CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o" \
+"CMakeFiles/client.dir/__/server/db/MySQL.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 ../bin/client: src/client/CMakeFiles/client.dir/Cient.cpp.o
+../bin/client: src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o
+../bin/client: src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o
+../bin/client: src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o
+../bin/client: src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o
+../bin/client: src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o
+../bin/client: src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.o
 ../bin/client: src/client/CMakeFiles/client.dir/build.make
 ../bin/client: src/client/CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../../bin/client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../../bin/client"
 	cd /home/ye/MrChat/build/src/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

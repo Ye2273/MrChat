@@ -27,6 +27,8 @@ public:
     void Login(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
     // 处理注册业务
     void Register(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
+    // 处理注销业务
+    void Logout(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
 
     // 处理聊天业务
     void Chat(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);

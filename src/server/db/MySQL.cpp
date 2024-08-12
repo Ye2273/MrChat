@@ -29,7 +29,6 @@ bool MySQL::Connect()
     {
         // C和C++代码默认的编码字符是ASCII
         mysql_query(_conn, "set names gbk");
-        LOG_INFO << "connect mysql success!";
     }
     else
     {

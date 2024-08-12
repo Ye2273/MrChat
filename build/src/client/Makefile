@@ -152,6 +152,168 @@ Cient.cpp.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/Cient.cpp.s
 .PHONY : Cient.cpp.s
 
+__/server/db/MySQL.o: __/server/db/MySQL.cpp.o
+
+.PHONY : __/server/db/MySQL.o
+
+# target to build an object file
+__/server/db/MySQL.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.o
+.PHONY : __/server/db/MySQL.cpp.o
+
+__/server/db/MySQL.i: __/server/db/MySQL.cpp.i
+
+.PHONY : __/server/db/MySQL.i
+
+# target to preprocess a source file
+__/server/db/MySQL.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.i
+.PHONY : __/server/db/MySQL.cpp.i
+
+__/server/db/MySQL.s: __/server/db/MySQL.cpp.s
+
+.PHONY : __/server/db/MySQL.s
+
+# target to generate assembly for a file
+__/server/db/MySQL.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/db/MySQL.cpp.s
+.PHONY : __/server/db/MySQL.cpp.s
+
+__/server/offlinemsg/OfflineMsg.o: __/server/offlinemsg/OfflineMsg.cpp.o
+
+.PHONY : __/server/offlinemsg/OfflineMsg.o
+
+# target to build an object file
+__/server/offlinemsg/OfflineMsg.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.o
+.PHONY : __/server/offlinemsg/OfflineMsg.cpp.o
+
+__/server/offlinemsg/OfflineMsg.i: __/server/offlinemsg/OfflineMsg.cpp.i
+
+.PHONY : __/server/offlinemsg/OfflineMsg.i
+
+# target to preprocess a source file
+__/server/offlinemsg/OfflineMsg.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.i
+.PHONY : __/server/offlinemsg/OfflineMsg.cpp.i
+
+__/server/offlinemsg/OfflineMsg.s: __/server/offlinemsg/OfflineMsg.cpp.s
+
+.PHONY : __/server/offlinemsg/OfflineMsg.s
+
+# target to generate assembly for a file
+__/server/offlinemsg/OfflineMsg.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/offlinemsg/OfflineMsg.cpp.s
+.PHONY : __/server/offlinemsg/OfflineMsg.cpp.s
+
+__/server/proto/AccountService.pb.o: __/server/proto/AccountService.pb.cc.o
+
+.PHONY : __/server/proto/AccountService.pb.o
+
+# target to build an object file
+__/server/proto/AccountService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.o
+.PHONY : __/server/proto/AccountService.pb.cc.o
+
+__/server/proto/AccountService.pb.i: __/server/proto/AccountService.pb.cc.i
+
+.PHONY : __/server/proto/AccountService.pb.i
+
+# target to preprocess a source file
+__/server/proto/AccountService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.i
+.PHONY : __/server/proto/AccountService.pb.cc.i
+
+__/server/proto/AccountService.pb.s: __/server/proto/AccountService.pb.cc.s
+
+.PHONY : __/server/proto/AccountService.pb.s
+
+# target to generate assembly for a file
+__/server/proto/AccountService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/AccountService.pb.cc.s
+.PHONY : __/server/proto/AccountService.pb.cc.s
+
+__/server/proto/FriendService.pb.o: __/server/proto/FriendService.pb.cc.o
+
+.PHONY : __/server/proto/FriendService.pb.o
+
+# target to build an object file
+__/server/proto/FriendService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o
+.PHONY : __/server/proto/FriendService.pb.cc.o
+
+__/server/proto/FriendService.pb.i: __/server/proto/FriendService.pb.cc.i
+
+.PHONY : __/server/proto/FriendService.pb.i
+
+# target to preprocess a source file
+__/server/proto/FriendService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.i
+.PHONY : __/server/proto/FriendService.pb.cc.i
+
+__/server/proto/FriendService.pb.s: __/server/proto/FriendService.pb.cc.s
+
+.PHONY : __/server/proto/FriendService.pb.s
+
+# target to generate assembly for a file
+__/server/proto/FriendService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.s
+.PHONY : __/server/proto/FriendService.pb.cc.s
+
+__/server/proto/GroupService.pb.o: __/server/proto/GroupService.pb.cc.o
+
+.PHONY : __/server/proto/GroupService.pb.o
+
+# target to build an object file
+__/server/proto/GroupService.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o
+.PHONY : __/server/proto/GroupService.pb.cc.o
+
+__/server/proto/GroupService.pb.i: __/server/proto/GroupService.pb.cc.i
+
+.PHONY : __/server/proto/GroupService.pb.i
+
+# target to preprocess a source file
+__/server/proto/GroupService.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.i
+.PHONY : __/server/proto/GroupService.pb.cc.i
+
+__/server/proto/GroupService.pb.s: __/server/proto/GroupService.pb.cc.s
+
+.PHONY : __/server/proto/GroupService.pb.s
+
+# target to generate assembly for a file
+__/server/proto/GroupService.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.s
+.PHONY : __/server/proto/GroupService.pb.cc.s
+
+__/server/proto/Interface.pb.o: __/server/proto/Interface.pb.cc.o
+
+.PHONY : __/server/proto/Interface.pb.o
+
+# target to build an object file
+__/server/proto/Interface.pb.cc.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o
+.PHONY : __/server/proto/Interface.pb.cc.o
+
+__/server/proto/Interface.pb.i: __/server/proto/Interface.pb.cc.i
+
+.PHONY : __/server/proto/Interface.pb.i
+
+# target to preprocess a source file
+__/server/proto/Interface.pb.cc.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.i
+.PHONY : __/server/proto/Interface.pb.cc.i
+
+__/server/proto/Interface.pb.s: __/server/proto/Interface.pb.cc.s
+
+.PHONY : __/server/proto/Interface.pb.s
+
+# target to generate assembly for a file
+__/server/proto/Interface.pb.cc.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.s
+.PHONY : __/server/proto/Interface.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +326,24 @@ help:
 	@echo "... Cient.o"
 	@echo "... Cient.i"
 	@echo "... Cient.s"
+	@echo "... __/server/db/MySQL.o"
+	@echo "... __/server/db/MySQL.i"
+	@echo "... __/server/db/MySQL.s"
+	@echo "... __/server/offlinemsg/OfflineMsg.o"
+	@echo "... __/server/offlinemsg/OfflineMsg.i"
+	@echo "... __/server/offlinemsg/OfflineMsg.s"
+	@echo "... __/server/proto/AccountService.pb.o"
+	@echo "... __/server/proto/AccountService.pb.i"
+	@echo "... __/server/proto/AccountService.pb.s"
+	@echo "... __/server/proto/FriendService.pb.o"
+	@echo "... __/server/proto/FriendService.pb.i"
+	@echo "... __/server/proto/FriendService.pb.s"
+	@echo "... __/server/proto/GroupService.pb.o"
+	@echo "... __/server/proto/GroupService.pb.i"
+	@echo "... __/server/proto/GroupService.pb.s"
+	@echo "... __/server/proto/Interface.pb.o"
+	@echo "... __/server/proto/Interface.pb.i"
+	@echo "... __/server/proto/Interface.pb.s"
 .PHONY : help
 
 
