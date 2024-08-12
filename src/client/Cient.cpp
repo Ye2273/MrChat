@@ -273,6 +273,7 @@ void recvThread(int clientfd) {
         }
     }
 }
+
 // 登录成功后的处理
 void DoLoginResponse(const Ye_Interface::UnifiedMessage& login_response) {
     if(login_response.is_success() == true) {
