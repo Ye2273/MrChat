@@ -11,6 +11,7 @@
 #include "myrpc/MyRpcController.h"
 #include "FriendService.pb.h"
 #include "GroupService.pb.h"
+#include "Redis.h"
 using MsgHandler = std::function<void(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time)>;
 
 class InterfaceService
@@ -45,7 +46,8 @@ public:
     void GroupList(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
     // 处理获取群组用户id列表业务
     void GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, std::string &recv_buf, muduo::Timestamp time);
-
+    // redis上报消息的回调函数
+    void RedisSubscribeCallback(int channel, std::string message);
 
     //处理客户端异常退出
     void ClientCloseException(const muduo::net::TcpConnectionPtr &conn);
@@ -60,7 +62,8 @@ private:
     UserService _userService;
     // 离线消息对象
     OfflineMsg _offlineMsg;
-
+    // redis对象
+    Redis _redis;
 
     // 存储在线用户的通信连接
     std::unordered_map<int, muduo::net::TcpConnectionPtr> _userConnMap;

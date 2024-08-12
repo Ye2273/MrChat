@@ -12,8 +12,16 @@ src/server/FriendService/CMakeFiles/friend.dir/FriendService.cpp.o: ../src/serve
 src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.o: ../include/server/db/MySQL.h
 src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.o: ../src/server/db/MySQL.cpp
 
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o: ../include/server/db/MySQL.h
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o: ../include/server/offlinemsg/OfflineMsg.h
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o: ../include/server/proto/Interface.pb.h
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o: ../src/server/offlinemsg/OfflineMsg.cpp
+
 src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o: ../include/server/proto/FriendService.pb.h
 src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o: ../src/server/proto/FriendService.pb.cc
+
+src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o: ../include/server/redis/Redis.h
+src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o: ../src/server/redis/Redis.cpp
 
 src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.o: ../include/server/db/MySQL.h
 src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.o: ../include/server/user/User.h

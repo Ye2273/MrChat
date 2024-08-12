@@ -233,6 +233,33 @@ __/proto/AccountService.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/__/proto/AccountService.pb.cc.s
 .PHONY : __/proto/AccountService.pb.cc.s
 
+__/redis/Redis.o: __/redis/Redis.cpp.o
+
+.PHONY : __/redis/Redis.o
+
+# target to build an object file
+__/redis/Redis.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/__/redis/Redis.cpp.o
+.PHONY : __/redis/Redis.cpp.o
+
+__/redis/Redis.i: __/redis/Redis.cpp.i
+
+.PHONY : __/redis/Redis.i
+
+# target to preprocess a source file
+__/redis/Redis.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/__/redis/Redis.cpp.i
+.PHONY : __/redis/Redis.cpp.i
+
+__/redis/Redis.s: __/redis/Redis.cpp.s
+
+.PHONY : __/redis/Redis.s
+
+# target to generate assembly for a file
+__/redis/Redis.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/AccountService/CMakeFiles/account.dir/build.make src/server/AccountService/CMakeFiles/account.dir/__/redis/Redis.cpp.s
+.PHONY : __/redis/Redis.cpp.s
+
 __/user/UserService.o: __/user/UserService.cpp.o
 
 .PHONY : __/user/UserService.o
@@ -308,6 +335,9 @@ help:
 	@echo "... __/proto/AccountService.pb.o"
 	@echo "... __/proto/AccountService.pb.i"
 	@echo "... __/proto/AccountService.pb.s"
+	@echo "... __/redis/Redis.o"
+	@echo "... __/redis/Redis.i"
+	@echo "... __/redis/Redis.s"
 	@echo "... __/user/UserService.o"
 	@echo "... __/user/UserService.i"
 	@echo "... __/user/UserService.s"

@@ -18,6 +18,18 @@ InterfaceService::InterfaceService()
     _msgHandlerMap["AddGroup"] = std::bind(&InterfaceService::AddGroup, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     _msgHandlerMap["GroupList"] = std::bind(&InterfaceService::GroupList, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
     _msgHandlerMap["GroupChat"] = std::bind(&InterfaceService::GetGroupUsers, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3);
+
+    // 连接redis
+    if(_redis.RedisConnect())
+    {
+        // 设置上报消息的回调函数
+        _redis.InitSubscribeCallback(std::bind(&InterfaceService::RedisSubscribeCallback, this, std::placeholders::_1, std::placeholders::_2));
+    }
+    else
+    {
+        LOG_ERROR << "Redis connect failed";
+    }
+
 }   
 
 //获得消息对应的处理器
@@ -57,9 +69,13 @@ void InterfaceService::ClientCloseException(const muduo::net::TcpConnectionPtr &
             }
         }
     }
-    // 3.更新用户状态为离线
+    
     if (user.GetId() != -1)
     {
+        // 2.取消redis订阅
+        _redis.RedisUnsubscribe(user.GetId());
+
+        // 3.更新用户状态为离线
         user.SetState("offline");
         _userService.UpdateState(user);
     }
@@ -162,6 +178,10 @@ void InterfaceService::Login(const muduo::net::TcpConnectionPtr &conn, std::stri
             std::lock_guard<std::mutex> lock(_connMutex);
             _userConnMap[login_response.id()] = conn;
         }
+
+        // redis订阅用户id，接收用户的消息
+        _redis.RedisSubscribe(login_response.id());
+
         conn->send(send_str);
     }
     else
@@ -189,6 +209,9 @@ void InterfaceService::Logout(const muduo::net::TcpConnectionPtr &conn, std::str
             _userConnMap.erase(it);
         }
     }
+    // 2.取消redis订阅
+    _redis.RedisUnsubscribe(id);
+
     // 2.更新用户状态为离线
     User user;
     user.SetId(id);
@@ -216,6 +239,11 @@ void InterfaceService::Chat(const muduo::net::TcpConnectionPtr &conn, std::strin
         }
     }
     // 3.对方不在在线用户表中，再去数据库中查找（可能是在另一个服务器上的用户）
+    User user = _userService.Query(to_id);
+    if(user.GetState() == "online") {
+        _redis.RedisPublish(to_id, recv_str);
+        return;
+    }
 
     // 4.如果对方不在线，存储离线消息
     _offlineMsg.OfflineMsgInsert(to_id, recv_str);
@@ -489,8 +517,17 @@ void InterfaceService::GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, s
             }
             else
             {
-                // 3.2对方不在线，存储离线消息
-                _offlineMsg.OfflineMsgInsert(user_info.id(), group_request.msg());
+                User user = _userService.Query(user_info.id());
+                if(user.GetState() == "online")
+                {
+                    // 3.2对方在线，但不在本服务器上，通过redis转发消息
+                    _redis.RedisPublish(user_info.id(), recv_buf);
+                }
+                else
+                {
+                    // 3.3对方不在线，存储离线消息
+                    _offlineMsg.OfflineMsgInsert(user_info.id(), group_request.msg());
+                }
             }
         }
     }
@@ -500,3 +537,20 @@ void InterfaceService::GetGroupUsers(const muduo::net::TcpConnectionPtr &conn, s
     }
 }
 
+// redis上报消息的回调函数
+void InterfaceService::RedisSubscribeCallback(int channel, std::string message)
+{
+    // 查询用户是否在线
+    lock_guard<mutex> lock(_connMutex);
+    auto it = _userConnMap.find(channel);
+    if (it != _userConnMap.end())
+    {
+        // 用户在线，直接转发消息
+        it->second->send(message);
+    }
+    else
+    {
+        // 用户不在线，存储离线消息(可能在发送订阅消息过来的时候，用户下线了)
+        _offlineMsg.OfflineMsgInsert(channel, message);
+    }   
+}

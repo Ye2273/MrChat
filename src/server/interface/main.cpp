@@ -14,14 +14,14 @@ void ResetHandler(int)
 int main(int argc, char **argv)
 {
     MyRpcApplication::Instance()->Init(argc, argv);
-    // MyRpcConf configure = MyRpcApplication::Instance()->GetConf();
-    // std::string ip = configure.Load("rpcserverip");
-    // int port = atoi(configure.Load("rpcserverport").c_str());
+    MyRpcConf configure = MyRpcApplication::Instance()->GetConf();
+    std::string ip = configure.Load("rpcserverip");
+    int port = atoi(configure.Load("rpcserverport").c_str());
 
     signal(SIGINT, ResetHandler);
 
     muduo::net::EventLoop loop;
-    muduo::net::InetAddress addr("127.0.0.1", 6000);
+    muduo::net::InetAddress addr(ip, port);
     Interface server(&loop, addr, "Interface");
 
     server.start();

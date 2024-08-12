@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/account.dir/__/db/MySQL.cpp.o"
   "CMakeFiles/account.dir/__/offlinemsg/OfflineMsg.cpp.o"
   "CMakeFiles/account.dir/__/proto/AccountService.pb.cc.o"
+  "CMakeFiles/account.dir/__/redis/Redis.cpp.o"
   "CMakeFiles/account.dir/__/user/UserService.cpp.o"
   "CMakeFiles/account.dir/main.cpp.o"
 )

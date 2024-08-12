@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/ye/MrChat/bin/account"
+			"path" : "/home/ye/MrChat/bin/group"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"src/server/AccountService/CMakeLists.txt",
+			"src/server/GroupService/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 22,
+				"line" : 23,
 				"parent" : 2
 			},
 			{
@@ -98,6 +98,12 @@
 				"file" : 1,
 				"line" : 21,
 				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 2
 			}
 		]
 	},
@@ -134,22 +140,26 @@
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/home/ye/MrChat/include/server/proto"
+					"path" : "/home/ye/MrChat/include/server/redis"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/home/ye/MrChat/include/server/AccountService"
+					"path" : "/home/ye/MrChat/include/server/proto"
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/ye/MrChat/include/server/offlinemsg"
+					"path" : "/home/ye/MrChat/include/server/AccountService"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/ye/MrChat/include/server/FriendService"
+					"path" : "/home/ye/MrChat/include/server/offlinemsg"
 				},
 				{
 					"backtrace" : 13,
+					"path" : "/home/ye/MrChat/include/server/FriendService"
+				},
+				{
+					"backtrace" : 14,
 					"path" : "/home/ye/MrChat/include/server/GroupService"
 				}
 			],
@@ -161,11 +171,12 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		}
 	],
-	"id" : "account::@0b719f5fd35d56fb3c09",
+	"id" : "group::@6f8abe7624dffa1acd60",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -238,12 +249,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "account",
-	"nameOnDisk" : "account",
+	"name" : "group",
+	"nameOnDisk" : "group",
 	"paths" : 
 	{
-		"build" : "src/server/AccountService",
-		"source" : "src/server/AccountService"
+		"build" : "src/server/GroupService",
+		"source" : "src/server/GroupService"
 	},
 	"sourceGroups" : 
 	[
@@ -256,7 +267,8 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6
 			]
 		}
 	],
@@ -265,7 +277,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/server/AccountService/AccountService.cpp",
+			"path" : "src/server/GroupService/GroupService.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -277,7 +289,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/server/proto/AccountService.pb.cc",
+			"path" : "src/server/proto/GroupService.pb.cc",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -289,13 +301,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/server/AccountService/main.cpp",
+			"path" : "src/server/GroupService/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/server/offlinemsg/OfflineMsg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/redis/Redis.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

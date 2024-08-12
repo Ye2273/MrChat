@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ye/MrChat/src/server/FriendService/FriendService.cpp" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/FriendService.cpp.o"
   "/home/ye/MrChat/src/server/db/MySQL.cpp" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.o"
+  "/home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o"
   "/home/ye/MrChat/src/server/proto/FriendService.pb.cc" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o"
+  "/home/ye/MrChat/src/server/redis/Redis.cpp" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o"
   "/home/ye/MrChat/src/server/user/UserService.cpp" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.o"
   "/home/ye/MrChat/src/server/FriendService/main.cpp" "/home/ye/MrChat/build/src/server/FriendService/CMakeFiles/friend.dir/main.cpp.o"
   )
@@ -19,6 +21,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include/server/interface"
   "../include/server/user"
   "../include/server/db"
+  "../include/server/redis"
   "../include/server/proto"
   "../include/server/AccountService"
   "../include/server/offlinemsg"

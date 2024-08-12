@@ -139,35 +139,35 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "MrChat::@2804e40980a64c7d7ad1",
-					"jsonFile" : "target-MrChat-Debug-822cdbaa18447fcd0317.json",
+					"jsonFile" : "target-MrChat-Debug-d345cb7142814aa255b0.json",
 					"name" : "MrChat",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "account::@0b719f5fd35d56fb3c09",
-					"jsonFile" : "target-account-Debug-b4a18818ad085e951bed.json",
+					"jsonFile" : "target-account-Debug-6ebc11407b2744ec02cc.json",
 					"name" : "account",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 6,
 					"id" : "client::@8ca63c80a879d0067daa",
-					"jsonFile" : "target-client-Debug-3d4ea0ba97076ecc1029.json",
+					"jsonFile" : "target-client-Debug-806f6d935ed5c0cb729a.json",
 					"name" : "client",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "friend::@fa5eacf917cef41dcfe2",
-					"jsonFile" : "target-friend-Debug-24364381accfd7011e96.json",
+					"jsonFile" : "target-friend-Debug-5ff9442a0d788c4f8d22.json",
 					"name" : "friend",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "group::@6f8abe7624dffa1acd60",
-					"jsonFile" : "target-group-Debug-30ed4de0c3b649f95e8f.json",
+					"jsonFile" : "target-group-Debug-895d5a27aa0722621eda.json",
 					"name" : "group",
 					"projectIndex" : 0
 				}

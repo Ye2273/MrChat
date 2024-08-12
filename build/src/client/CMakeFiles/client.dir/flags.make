@@ -6,5 +6,5 @@ CXX_FLAGS = -g -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService 
+CXX_INCLUDES = -I/home/ye/MrChat/include -I/home/ye/MrChat/include/server -I/home/ye/MrChat/include/server/interface -I/home/ye/MrChat/include/server/user -I/home/ye/MrChat/include/server/db -I/home/ye/MrChat/include/server/redis -I/home/ye/MrChat/include/server/proto -I/home/ye/MrChat/include/server/AccountService -I/home/ye/MrChat/include/server/offlinemsg -I/home/ye/MrChat/include/server/FriendService -I/home/ye/MrChat/include/server/GroupService 
 

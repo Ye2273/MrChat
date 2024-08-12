@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/MrChat.dir/proto/FriendService.pb.cc.o"
   "CMakeFiles/MrChat.dir/proto/GroupService.pb.cc.o"
   "CMakeFiles/MrChat.dir/proto/Interface.pb.cc.o"
+  "CMakeFiles/MrChat.dir/redis/Redis.cpp.o"
   "CMakeFiles/MrChat.dir/user/UserService.cpp.o"
 )
 

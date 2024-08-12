@@ -3,7 +3,9 @@ file(REMOVE_RECURSE
   "../../../../bin/friend.pdb"
   "CMakeFiles/friend.dir/FriendService.cpp.o"
   "CMakeFiles/friend.dir/__/db/MySQL.cpp.o"
+  "CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o"
   "CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o"
+  "CMakeFiles/friend.dir/__/redis/Redis.cpp.o"
   "CMakeFiles/friend.dir/__/user/UserService.cpp.o"
   "CMakeFiles/friend.dir/main.cpp.o"
 )

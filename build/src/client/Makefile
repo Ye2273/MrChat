@@ -314,6 +314,33 @@ __/server/proto/Interface.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.s
 .PHONY : __/server/proto/Interface.pb.cc.s
 
+__/server/redis/Redis.o: __/server/redis/Redis.cpp.o
+
+.PHONY : __/server/redis/Redis.o
+
+# target to build an object file
+__/server/redis/Redis.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/redis/Redis.cpp.o
+.PHONY : __/server/redis/Redis.cpp.o
+
+__/server/redis/Redis.i: __/server/redis/Redis.cpp.i
+
+.PHONY : __/server/redis/Redis.i
+
+# target to preprocess a source file
+__/server/redis/Redis.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/redis/Redis.cpp.i
+.PHONY : __/server/redis/Redis.cpp.i
+
+__/server/redis/Redis.s: __/server/redis/Redis.cpp.s
+
+.PHONY : __/server/redis/Redis.s
+
+# target to generate assembly for a file
+__/server/redis/Redis.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/client/CMakeFiles/client.dir/build.make src/client/CMakeFiles/client.dir/__/server/redis/Redis.cpp.s
+.PHONY : __/server/redis/Redis.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -344,6 +371,9 @@ help:
 	@echo "... __/server/proto/Interface.pb.o"
 	@echo "... __/server/proto/Interface.pb.i"
 	@echo "... __/server/proto/Interface.pb.s"
+	@echo "... __/server/redis/Redis.o"
+	@echo "... __/server/redis/Redis.i"
+	@echo "... __/server/redis/Redis.s"
 .PHONY : help
 
 

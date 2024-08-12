@@ -27,3 +27,6 @@ src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o: ../src/se
 src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o: ../include/server/proto/Interface.pb.h
 src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o: ../src/server/proto/Interface.pb.cc
 
+src/client/CMakeFiles/client.dir/__/server/redis/Redis.cpp.o: ../include/server/redis/Redis.h
+src/client/CMakeFiles/client.dir/__/server/redis/Redis.cpp.o: ../src/server/redis/Redis.cpp
+

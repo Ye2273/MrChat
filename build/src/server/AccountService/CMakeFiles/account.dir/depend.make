@@ -20,6 +20,9 @@ src/server/AccountService/CMakeFiles/account.dir/__/offlinemsg/OfflineMsg.cpp.o:
 src/server/AccountService/CMakeFiles/account.dir/__/proto/AccountService.pb.cc.o: ../include/server/proto/AccountService.pb.h
 src/server/AccountService/CMakeFiles/account.dir/__/proto/AccountService.pb.cc.o: ../src/server/proto/AccountService.pb.cc
 
+src/server/AccountService/CMakeFiles/account.dir/__/redis/Redis.cpp.o: ../include/server/redis/Redis.h
+src/server/AccountService/CMakeFiles/account.dir/__/redis/Redis.cpp.o: ../src/server/redis/Redis.cpp
+
 src/server/AccountService/CMakeFiles/account.dir/__/user/UserService.cpp.o: ../include/server/db/MySQL.h
 src/server/AccountService/CMakeFiles/account.dir/__/user/UserService.cpp.o: ../include/server/user/User.h
 src/server/AccountService/CMakeFiles/account.dir/__/user/UserService.cpp.o: ../include/server/user/UserService.h

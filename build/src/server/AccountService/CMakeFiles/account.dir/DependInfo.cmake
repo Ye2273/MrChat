@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ye/MrChat/src/server/db/MySQL.cpp" "/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir/__/db/MySQL.cpp.o"
   "/home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp" "/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir/__/offlinemsg/OfflineMsg.cpp.o"
   "/home/ye/MrChat/src/server/proto/AccountService.pb.cc" "/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir/__/proto/AccountService.pb.cc.o"
+  "/home/ye/MrChat/src/server/redis/Redis.cpp" "/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir/__/redis/Redis.cpp.o"
   "/home/ye/MrChat/src/server/user/UserService.cpp" "/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir/__/user/UserService.cpp.o"
   "/home/ye/MrChat/src/server/AccountService/main.cpp" "/home/ye/MrChat/build/src/server/AccountService/CMakeFiles/account.dir/main.cpp.o"
   )
@@ -20,6 +21,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include/server/interface"
   "../include/server/user"
   "../include/server/db"
+  "../include/server/redis"
   "../include/server/proto"
   "../include/server/AccountService"
   "../include/server/offlinemsg"

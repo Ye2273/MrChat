@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/ye/MrChat/bin/group"
+			"path" : "/home/ye/MrChat/bin/MrChat"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"src/server/GroupService/CMakeLists.txt",
+			"src/server/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 5,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 22,
+				"line" : 23,
 				"parent" : 2
 			},
 			{
@@ -98,6 +98,12 @@
 				"file" : 1,
 				"line" : 21,
 				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 2
 			}
 		]
 	},
@@ -134,22 +140,26 @@
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/home/ye/MrChat/include/server/proto"
+					"path" : "/home/ye/MrChat/include/server/redis"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/home/ye/MrChat/include/server/AccountService"
+					"path" : "/home/ye/MrChat/include/server/proto"
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/ye/MrChat/include/server/offlinemsg"
+					"path" : "/home/ye/MrChat/include/server/AccountService"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/ye/MrChat/include/server/FriendService"
+					"path" : "/home/ye/MrChat/include/server/offlinemsg"
 				},
 				{
 					"backtrace" : 13,
+					"path" : "/home/ye/MrChat/include/server/FriendService"
+				},
+				{
+					"backtrace" : 14,
 					"path" : "/home/ye/MrChat/include/server/GroupService"
 				}
 			],
@@ -160,11 +170,17 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
-	"id" : "group::@6f8abe7624dffa1acd60",
+	"id" : "MrChat::@2804e40980a64c7d7ad1",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -211,22 +227,6 @@
 				"role" : "libraries"
 			},
 			{
-				"fragment" : "-lmysqlclient",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lhiredis",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lpthread",
-				"role" : "libraries"
-			},
-			{
-				"fragment" : "-lzookeeper_mt",
-				"role" : "libraries"
-			},
-			{
 				"fragment" : "-lhiredis",
 				"role" : "libraries"
 			},
@@ -237,12 +237,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "group",
-	"nameOnDisk" : "group",
+	"name" : "MrChat",
+	"nameOnDisk" : "MrChat",
 	"paths" : 
 	{
-		"build" : "src/server/GroupService",
-		"source" : "src/server/GroupService"
+		"build" : "src/server",
+		"source" : "src/server"
 	},
 	"sourceGroups" : 
 	[
@@ -254,7 +254,13 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
 			]
 		}
 	],
@@ -263,13 +269,37 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/server/GroupService/GroupService.cpp",
+			"path" : "src/server/db/MySQL.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/server/db/MySQL.cpp",
+			"path" : "src/server/interface/Interface.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/interface/InterfaceService.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/interface/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/proto/AccountService.pb.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/proto/FriendService.pb.cc",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -281,13 +311,25 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/server/proto/Interface.pb.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/server/user/UserService.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/server/GroupService/main.cpp",
+			"path" : "src/server/offlinemsg/OfflineMsg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/redis/Redis.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

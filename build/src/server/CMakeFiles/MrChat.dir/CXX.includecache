@@ -51,6 +51,8 @@ FriendService.pb.h
 ../include/server/interface/FriendService.pb.h
 GroupService.pb.h
 ../include/server/interface/GroupService.pb.h
+Redis.h
+../include/server/interface/Redis.h
 
 ../include/server/offlinemsg/OfflineMsg.h
 string
@@ -178,6 +180,16 @@ google/protobuf/unknown_field_set.h
 google/protobuf/port_def.inc
 -
 google/protobuf/port_undef.inc
+-
+
+../include/server/redis/Redis.h
+hiredis/hiredis.h
+-
+thread
+-
+functional
+-
+iostream
 -
 
 ../include/server/user/User.h

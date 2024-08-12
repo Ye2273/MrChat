@@ -5,8 +5,9 @@ aux_source_directory(./interface INT_LIST)
 aux_source_directory(./proto ACC_LIST)
 aux_source_directory(./user USER_LIST)
 aux_source_directory(./offlinemsg OFFLINE_LIST)
+aux_source_directory(./redis REDIS_LIST)
 # 生成可执行文件
-add_executable(MrChat ${SRC_LIST} ${DB_LIST} ${INT_LIST} ${ACC_LIST} ${USER_LIST} ${OFFLINE_LIST} )
+add_executable(MrChat ${SRC_LIST} ${DB_LIST} ${INT_LIST} ${ACC_LIST} ${USER_LIST} ${OFFLINE_LIST} ${REDIS_LIST})
 
 # 链接库
 target_link_libraries(MrChat MyRpc protobuf muduo_net muduo_base mysqlclient  zookeeper_mt hiredis pthread )

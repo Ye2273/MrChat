@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 22,
+				"line" : 23,
 				"parent" : 2
 			},
 			{
@@ -98,6 +98,12 @@
 				"file" : 1,
 				"line" : 21,
 				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 22,
+				"parent" : 2
 			}
 		]
 	},
@@ -134,22 +140,26 @@
 				},
 				{
 					"backtrace" : 9,
-					"path" : "/home/ye/MrChat/include/server/proto"
+					"path" : "/home/ye/MrChat/include/server/redis"
 				},
 				{
 					"backtrace" : 10,
-					"path" : "/home/ye/MrChat/include/server/AccountService"
+					"path" : "/home/ye/MrChat/include/server/proto"
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/ye/MrChat/include/server/offlinemsg"
+					"path" : "/home/ye/MrChat/include/server/AccountService"
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/ye/MrChat/include/server/FriendService"
+					"path" : "/home/ye/MrChat/include/server/offlinemsg"
 				},
 				{
 					"backtrace" : 13,
+					"path" : "/home/ye/MrChat/include/server/FriendService"
+				},
+				{
+					"backtrace" : 14,
 					"path" : "/home/ye/MrChat/include/server/GroupService"
 				}
 			],
@@ -160,7 +170,9 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6
 			]
 		}
 	],
@@ -254,7 +266,9 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5,
+				6
 			]
 		}
 	],
@@ -288,6 +302,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/server/FriendService/main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/offlinemsg/OfflineMsg.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/server/redis/Redis.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

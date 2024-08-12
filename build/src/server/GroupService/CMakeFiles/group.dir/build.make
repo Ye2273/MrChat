@@ -122,13 +122,41 @@ src/server/GroupService/CMakeFiles/group.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/group.dir/main.cpp.s"
 	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/GroupService/main.cpp -o CMakeFiles/group.dir/main.cpp.s
 
+src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o: src/server/GroupService/CMakeFiles/group.dir/flags.make
+src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o: ../src/server/offlinemsg/OfflineMsg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o"
+	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o -c /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
+
+src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.i"
+	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp > CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.i
+
+src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.s"
+	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp -o CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.s
+
+src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o: src/server/GroupService/CMakeFiles/group.dir/flags.make
+src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o: ../src/server/redis/Redis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o"
+	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/group.dir/__/redis/Redis.cpp.o -c /home/ye/MrChat/src/server/redis/Redis.cpp
+
+src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/group.dir/__/redis/Redis.cpp.i"
+	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/redis/Redis.cpp > CMakeFiles/group.dir/__/redis/Redis.cpp.i
+
+src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/group.dir/__/redis/Redis.cpp.s"
+	cd /home/ye/MrChat/build/src/server/GroupService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/redis/Redis.cpp -o CMakeFiles/group.dir/__/redis/Redis.cpp.s
+
 # Object files for target group
 group_OBJECTS = \
 "CMakeFiles/group.dir/GroupService.cpp.o" \
 "CMakeFiles/group.dir/__/db/MySQL.cpp.o" \
 "CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o" \
 "CMakeFiles/group.dir/__/user/UserService.cpp.o" \
-"CMakeFiles/group.dir/main.cpp.o"
+"CMakeFiles/group.dir/main.cpp.o" \
+"CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o" \
+"CMakeFiles/group.dir/__/redis/Redis.cpp.o"
 
 # External object files for target group
 group_EXTERNAL_OBJECTS =
@@ -138,9 +166,11 @@ group_EXTERNAL_OBJECTS =
 ../bin/group: src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o
 ../bin/group: src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.o
 ../bin/group: src/server/GroupService/CMakeFiles/group.dir/main.cpp.o
+../bin/group: src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o
+../bin/group: src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o
 ../bin/group: src/server/GroupService/CMakeFiles/group.dir/build.make
 ../bin/group: src/server/GroupService/CMakeFiles/group.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../../../../bin/group"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../../../bin/group"
 	cd /home/ye/MrChat/build/src/server/GroupService && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/group.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

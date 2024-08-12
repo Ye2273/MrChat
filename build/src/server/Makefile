@@ -368,6 +368,33 @@ proto/Interface.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/proto/Interface.pb.cc.s
 .PHONY : proto/Interface.pb.cc.s
 
+redis/Redis.o: redis/Redis.cpp.o
+
+.PHONY : redis/Redis.o
+
+# target to build an object file
+redis/Redis.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/redis/Redis.cpp.o
+.PHONY : redis/Redis.cpp.o
+
+redis/Redis.i: redis/Redis.cpp.i
+
+.PHONY : redis/Redis.i
+
+# target to preprocess a source file
+redis/Redis.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/redis/Redis.cpp.i
+.PHONY : redis/Redis.cpp.i
+
+redis/Redis.s: redis/Redis.cpp.s
+
+.PHONY : redis/Redis.s
+
+# target to generate assembly for a file
+redis/Redis.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/CMakeFiles/MrChat.dir/build.make src/server/CMakeFiles/MrChat.dir/redis/Redis.cpp.s
+.PHONY : redis/Redis.cpp.s
+
 user/UserService.o: user/UserService.cpp.o
 
 .PHONY : user/UserService.o
@@ -431,6 +458,9 @@ help:
 	@echo "... proto/Interface.pb.o"
 	@echo "... proto/Interface.pb.i"
 	@echo "... proto/Interface.pb.s"
+	@echo "... redis/Redis.o"
+	@echo "... redis/Redis.i"
+	@echo "... redis/Redis.s"
 	@echo "... user/UserService.o"
 	@echo "... user/UserService.i"
 	@echo "... user/UserService.s"

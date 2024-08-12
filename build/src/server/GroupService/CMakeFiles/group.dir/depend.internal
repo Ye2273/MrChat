@@ -6,9 +6,17 @@ src/server/GroupService/CMakeFiles/group.dir/GroupService.cpp.o
 src/server/GroupService/CMakeFiles/group.dir/__/db/MySQL.cpp.o
  ../include/server/db/MySQL.h
  /home/ye/MrChat/src/server/db/MySQL.cpp
+src/server/GroupService/CMakeFiles/group.dir/__/offlinemsg/OfflineMsg.cpp.o
+ ../include/server/db/MySQL.h
+ ../include/server/offlinemsg/OfflineMsg.h
+ ../include/server/proto/Interface.pb.h
+ /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
 src/server/GroupService/CMakeFiles/group.dir/__/proto/GroupService.pb.cc.o
  ../include/server/proto/GroupService.pb.h
  /home/ye/MrChat/src/server/proto/GroupService.pb.cc
+src/server/GroupService/CMakeFiles/group.dir/__/redis/Redis.cpp.o
+ ../include/server/redis/Redis.h
+ /home/ye/MrChat/src/server/redis/Redis.cpp
 src/server/GroupService/CMakeFiles/group.dir/__/user/UserService.cpp.o
  ../include/server/db/MySQL.h
  ../include/server/user/User.h

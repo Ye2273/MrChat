@@ -179,6 +179,33 @@ __/db/MySQL.cpp.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/db/MySQL.cpp.s
 .PHONY : __/db/MySQL.cpp.s
 
+__/offlinemsg/OfflineMsg.o: __/offlinemsg/OfflineMsg.cpp.o
+
+.PHONY : __/offlinemsg/OfflineMsg.o
+
+# target to build an object file
+__/offlinemsg/OfflineMsg.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o
+.PHONY : __/offlinemsg/OfflineMsg.cpp.o
+
+__/offlinemsg/OfflineMsg.i: __/offlinemsg/OfflineMsg.cpp.i
+
+.PHONY : __/offlinemsg/OfflineMsg.i
+
+# target to preprocess a source file
+__/offlinemsg/OfflineMsg.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.i
+.PHONY : __/offlinemsg/OfflineMsg.cpp.i
+
+__/offlinemsg/OfflineMsg.s: __/offlinemsg/OfflineMsg.cpp.s
+
+.PHONY : __/offlinemsg/OfflineMsg.s
+
+# target to generate assembly for a file
+__/offlinemsg/OfflineMsg.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.s
+.PHONY : __/offlinemsg/OfflineMsg.cpp.s
+
 __/proto/FriendService.pb.o: __/proto/FriendService.pb.cc.o
 
 .PHONY : __/proto/FriendService.pb.o
@@ -205,6 +232,33 @@ __/proto/FriendService.pb.s: __/proto/FriendService.pb.cc.s
 __/proto/FriendService.pb.cc.s:
 	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.s
 .PHONY : __/proto/FriendService.pb.cc.s
+
+__/redis/Redis.o: __/redis/Redis.cpp.o
+
+.PHONY : __/redis/Redis.o
+
+# target to build an object file
+__/redis/Redis.cpp.o:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o
+.PHONY : __/redis/Redis.cpp.o
+
+__/redis/Redis.i: __/redis/Redis.cpp.i
+
+.PHONY : __/redis/Redis.i
+
+# target to preprocess a source file
+__/redis/Redis.cpp.i:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.i
+.PHONY : __/redis/Redis.cpp.i
+
+__/redis/Redis.s: __/redis/Redis.cpp.s
+
+.PHONY : __/redis/Redis.s
+
+# target to generate assembly for a file
+__/redis/Redis.cpp.s:
+	cd /home/ye/MrChat/build && $(MAKE) -f src/server/FriendService/CMakeFiles/friend.dir/build.make src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.s
+.PHONY : __/redis/Redis.cpp.s
 
 __/user/UserService.o: __/user/UserService.cpp.o
 
@@ -275,9 +329,15 @@ help:
 	@echo "... __/db/MySQL.o"
 	@echo "... __/db/MySQL.i"
 	@echo "... __/db/MySQL.s"
+	@echo "... __/offlinemsg/OfflineMsg.o"
+	@echo "... __/offlinemsg/OfflineMsg.i"
+	@echo "... __/offlinemsg/OfflineMsg.s"
 	@echo "... __/proto/FriendService.pb.o"
 	@echo "... __/proto/FriendService.pb.i"
 	@echo "... __/proto/FriendService.pb.s"
+	@echo "... __/redis/Redis.o"
+	@echo "... __/redis/Redis.i"
+	@echo "... __/redis/Redis.s"
 	@echo "... __/user/UserService.o"
 	@echo "... __/user/UserService.i"
 	@echo "... __/user/UserService.s"

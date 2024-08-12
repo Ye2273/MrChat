@@ -122,13 +122,41 @@ src/server/FriendService/CMakeFiles/friend.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/friend.dir/main.cpp.s"
 	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/FriendService/main.cpp -o CMakeFiles/friend.dir/main.cpp.s
 
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o: src/server/FriendService/CMakeFiles/friend.dir/flags.make
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o: ../src/server/offlinemsg/OfflineMsg.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o"
+	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o -c /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp
+
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.i"
+	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp > CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.i
+
+src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.s"
+	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/offlinemsg/OfflineMsg.cpp -o CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.s
+
+src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o: src/server/FriendService/CMakeFiles/friend.dir/flags.make
+src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o: ../src/server/redis/Redis.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o"
+	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/friend.dir/__/redis/Redis.cpp.o -c /home/ye/MrChat/src/server/redis/Redis.cpp
+
+src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/friend.dir/__/redis/Redis.cpp.i"
+	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ye/MrChat/src/server/redis/Redis.cpp > CMakeFiles/friend.dir/__/redis/Redis.cpp.i
+
+src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/friend.dir/__/redis/Redis.cpp.s"
+	cd /home/ye/MrChat/build/src/server/FriendService && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ye/MrChat/src/server/redis/Redis.cpp -o CMakeFiles/friend.dir/__/redis/Redis.cpp.s
+
 # Object files for target friend
 friend_OBJECTS = \
 "CMakeFiles/friend.dir/FriendService.cpp.o" \
 "CMakeFiles/friend.dir/__/db/MySQL.cpp.o" \
 "CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o" \
 "CMakeFiles/friend.dir/__/user/UserService.cpp.o" \
-"CMakeFiles/friend.dir/main.cpp.o"
+"CMakeFiles/friend.dir/main.cpp.o" \
+"CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o" \
+"CMakeFiles/friend.dir/__/redis/Redis.cpp.o"
 
 # External object files for target friend
 friend_EXTERNAL_OBJECTS =
@@ -138,9 +166,11 @@ friend_EXTERNAL_OBJECTS =
 ../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/__/proto/FriendService.pb.cc.o
 ../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/__/user/UserService.cpp.o
 ../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/main.cpp.o
+../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/__/offlinemsg/OfflineMsg.cpp.o
+../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/__/redis/Redis.cpp.o
 ../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/build.make
 ../bin/friend: src/server/FriendService/CMakeFiles/friend.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../../../../bin/friend"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ye/MrChat/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../../../../bin/friend"
 	cd /home/ye/MrChat/build/src/server/FriendService && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/friend.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

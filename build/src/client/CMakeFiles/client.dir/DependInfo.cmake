@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ye/MrChat/src/server/proto/FriendService.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/FriendService.pb.cc.o"
   "/home/ye/MrChat/src/server/proto/GroupService.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/GroupService.pb.cc.o"
   "/home/ye/MrChat/src/server/proto/Interface.pb.cc" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/proto/Interface.pb.cc.o"
+  "/home/ye/MrChat/src/server/redis/Redis.cpp" "/home/ye/MrChat/build/src/client/CMakeFiles/client.dir/__/server/redis/Redis.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,6 +22,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../include/server/interface"
   "../include/server/user"
   "../include/server/db"
+  "../include/server/redis"
   "../include/server/proto"
   "../include/server/AccountService"
   "../include/server/offlinemsg"
