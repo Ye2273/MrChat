@@ -22,7 +22,7 @@
 
 ### 1.1、整个聊天系统的框架图
 
-![image-20240813204847219](项目介绍.assets/image-20240813204847219.png)
+![image-20240813204847219](https://github.com/Ye2273/MrChat/blob/master/README.assets/image-20240813204847219.png)
 
 ### 1.2、”分布式”，“集群”
 
@@ -30,7 +30,7 @@
 
 #### 分布式：
 
-一个工程拆分了很多模块，每一个模块独立部署运行在一个服务器主机上，所有服务器协同工作共同提供服务，每一台服务器称作分布式的一个节点，根据节点的并发要求，对一个节点可以再做节点模块集群部署。![image-20240813211034331](项目介绍.assets/image-20240813211034331.png)
+一个工程拆分了很多模块，每一个模块独立部署运行在一个服务器主机上，所有服务器协同工作共同提供服务，每一台服务器称作分布式的一个节点，根据节点的并发要求，对一个节点可以再做节点模块集群部署。![image-20240813211034331](https://github.com/Ye2273/MrChat/blob/master/README.assets/image-20240813211034331.png)
 
 ##### 业务服务器群
 
@@ -60,7 +60,7 @@ RPC远程调用的核心所在，在业务服务器这边扮演“client”的�
 
 **集群**的设计通过使用负载均衡、消息队列和集群数据库，使得系统在处理大量并发请求时能够保持高效和稳定的运行。
 
-<img src="项目介绍.assets/image-20240813213226421.png" alt="image-20240813213226421" style="zoom: 50%;" />——-<img src="项目介绍.assets/image-20240813213304577.png" alt="image-20240813213304577" style="zoom:50%;" />
+<img src="https://github.com/Ye2273/MrChat/blob/master/README.assets/image-20240813213226421.png" alt="image-20240813213226421" style="zoom: 40%;" />——-<img src="https://github.com/Ye2273/MrChat/blob/master/README.assets/image-20240813213244090.png" alt="image-20240813213304577" width="500" height="500" />
 
 ##### **Nginx负载均衡**：
 
