@@ -17,7 +17,7 @@
 > 负载均衡器：nginx
 
 
-
+> https://blog.csdn.net/weixin_67134938/article/details/141197140
 ## 1、项目介绍
 
 ### 1.1、整个聊天系统的框架图
